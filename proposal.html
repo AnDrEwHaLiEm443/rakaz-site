@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>عرض ركائز الرقمي</title>
+<meta name="description" content="تصور متكامل لتطوير الموقع والهوية البصرية والبروفايل والمحتوى لشركة ركائز، مع خطة التنفيذ وعرض السعر.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&family=Cormorant+Garamond:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+.hero{min-height:min(88vh,780px)}
+.hero h1{font-size:clamp(34px,5.4vw,64px)}
+.meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:44px;color:rgba(255,255,255,.75);font-size:15px}
+.meta b{color:var(--gold-2);display:block;font-size:13px;font-weight:700}
+.toc{display:flex;gap:10px;flex-wrap:wrap;margin-top:34px}
+.toc a{border:1px solid rgba(227,198,123,.35);color:var(--cream);padding:8px 16px;border-radius:999px;font-size:14px}
+.toc a:hover{background:rgba(227,198,123,.15)}
+.audit{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:46px}
+.box{background:#fff;border-radius:var(--radius);padding:32px;box-shadow:0 14px 40px rgba(15,61,46,.07)}
+.box h3{display:flex;align-items:center;gap:10px;margin-bottom:14px}
+.box ul{list-style:none}
+.box li{padding:10px 0;border-bottom:1px dashed var(--line);display:flex;gap:10px;font-size:15.5px}
+.box li:last-child{border:0}
+.ok li::before{content:"✓";color:#2d7a55;font-weight:800}
+.gap li::before{content:"✕";color:#b4552f;font-weight:800}
+.deliv{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:50px}
+.dv{border:1px solid rgba(227,198,123,.22);border-radius:var(--radius);padding:34px;background:linear-gradient(180deg,rgba(255,255,255,.05),transparent)}
+.dv .tag{display:inline-block;background:rgba(227,198,123,.16);color:var(--gold-2);padding:4px 12px;border-radius:99px;font-size:13px;font-weight:700;margin-bottom:12px}
+.dv p{color:rgba(247,241,227,.75);font-size:15.5px;margin:8px 0 14px}
+.dv ul{list-style:none;columns:2;column-gap:20px}
+.dv li{font-size:14.5px;color:var(--cream);padding:4px 0;break-inside:avoid}
+.dv li::before{content:"◆ ";color:var(--gold);font-size:10px}
+/* identity board */
+.idb{display:grid;grid-template-columns:1.1fr 1fr;gap:24px;margin-top:46px}
+.swatches{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:16px}
+.sw{border-radius:14px;height:110px;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;font-size:12.5px;font-weight:700;border:1px solid var(--line)}
+.sw small{font-weight:500;opacity:.8;direction:ltr;text-align:right}
+.type-row{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px dashed var(--line);padding:14px 0}
+.type-row:last-child{border:0}
+.mock-row{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.card-mock{aspect-ratio:1.75;border-radius:14px;padding:26px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 24px 50px rgba(10,42,32,.22);position:relative;overflow:hidden}
+.card-front{background:var(--green);color:var(--cream);align-items:center;justify-content:center;gap:6px}
+.card-front .ar{font-family:var(--display);font-size:46px;color:var(--cream);line-height:1}
+.card-front .en{font-family:"Cormorant Garamond",serif;letter-spacing:10px;color:var(--gold-2);font-size:18px;direction:ltr}
+.card-front::before,.card-back::before{content:"";position:absolute;inset:10px;border:1px solid rgba(227,198,123,.45);border-radius:9px;pointer-events:none}
+.card-back{background:var(--cream);color:var(--green)}
+.card-back b{font-family:var(--display);font-size:22px}
+.card-back .wave{position:absolute;inset-inline:0;bottom:0;height:34%;background:var(--green);clip-path:polygon(0 40%,30% 10%,55% 60%,100% 20%,100% 100%,0 100%)}
+.card-back .l{font-size:13px;line-height:1.9;color:var(--muted);position:relative;z-index:2}
+/* profile mock */
+.profile{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}
+.pg{aspect-ratio:1/1.414;border-radius:10px;overflow:hidden;box-shadow:0 24px 50px rgba(10,42,32,.2);position:relative;background:var(--cream)}
+.pg.cover{background:var(--green-deep);color:var(--cream);display:flex;flex-direction:column;justify-content:space-between;padding:28px}
+.pg.cover::before{content:"";position:absolute;inset:0;background:url(img/hero.jpg) center/cover;opacity:.28}
+.pg.cover>*{position:relative}
+.pg.cover h3{color:var(--cream);font-size:30px}
+.pg .ph{height:46%;background:url(img/offices.jpg) center/cover}
+.pg .bd{padding:20px}
+.pg .bd .bar{height:7px;border-radius:9px;background:var(--cream-2);margin:9px 0}
+.pg .bd .bar.g{background:var(--gold);width:40%}
+.pg.inner2{padding:22px}
+.kpi{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.kpi div{background:#fff;border-radius:8px;padding:12px;text-align:center}
+.kpi b{font-family:var(--display);color:var(--green);font-size:26px;display:block;line-height:1.2}
+.kpi span{font-size:11px;color:var(--muted)}
+/* sitemap */
+.sitemap{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-top:40px}
+.sitemap div{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px 12px;text-align:center;font-weight:700;color:var(--green);font-size:15px}
+.sitemap div small{display:block;font-weight:500;color:var(--muted);font-size:12.5px;margin-top:4px}
+/* timeline */
+.tl{margin-top:46px;display:grid;gap:14px}
+.ph-row{display:grid;grid-template-columns:150px 1fr;gap:20px;align-items:center}
+.ph-row .wk{font-weight:700;color:var(--gold)}
+.ph-bar{background:#fff;border-radius:14px;padding:18px 22px;border-inline-start:4px solid var(--green);box-shadow:0 8px 24px rgba(15,61,46,.06)}
+.ph-bar b{color:var(--green)}
+.ph-bar span{color:var(--muted);font-size:15px;display:block}
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:50px;align-items:stretch}
+.plan{background:#fff;border-radius:22px;padding:36px 30px;border:1px solid var(--line);display:flex;flex-direction:column}
+.plan.pop{background:var(--green);color:var(--cream);border-color:var(--gold);transform:translateY(-12px);box-shadow:0 30px 60px rgba(10,42,32,.3);position:relative}
+.plan.pop h3{color:var(--cream)}
+.plan .ribbon{position:absolute;top:-14px;inset-inline-start:30px;background:var(--gold);color:var(--green-deep);font-size:13px;font-weight:800;padding:4px 14px;border-radius:99px}
+.price{font-family:var(--display);font-size:46px;color:var(--gold);line-height:1.1;margin:14px 0 4px}
+.price small{font-family:var(--body);font-size:16px;color:var(--muted)}
+.plan.pop .price small{color:rgba(247,241,227,.7)}
+.plan ul{list-style:none;margin:20px 0 28px;flex:1}
+.plan li{padding:8px 0;font-size:15px;display:flex;gap:10px;border-bottom:1px dashed var(--line)}
+.plan.pop li{border-color:rgba(227,198,123,.2)}
+.plan li::before{content:"✓";color:var(--gold);font-weight:800}
+.plan .sub{font-size:14px;color:var(--muted)}.plan.pop .sub{color:rgba(247,241,227,.7)}
+.items{width:100%;border-collapse:collapse;margin-top:40px;background:#fff;border-radius:var(--radius);overflow:hidden;font-size:15.5px}
+.items th,.items td{padding:15px 20px;text-align:start;border-bottom:1px solid var(--line)}
+.items th{background:var(--green);color:var(--cream);font-weight:700}
+.items td:last-child,.items th:last-child{text-align:end;white-space:nowrap}
+.items tr:last-child td{border:0;font-weight:800;color:var(--green);background:var(--cream-2)}
+.terms{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:30px}
+.terms div{background:#fff;border-radius:14px;padding:20px;font-size:14.5px;color:var(--muted)}
+.terms b{display:block;color:var(--green);margin-bottom:4px}
+/* samples */
+.samples{display:grid;grid-template-columns:1.3fr 1fr;gap:24px;margin-top:46px}
+.browser{border-radius:16px;overflow:hidden;box-shadow:0 30px 70px rgba(10,42,32,.25);background:#fff;display:block;transition:.3s}
+.browser:hover{transform:translateY(-6px)}
+.browser .bar{height:34px;background:#ece6d6;display:flex;align-items:center;gap:6px;padding:0 14px}
+.browser .bar i{width:10px;height:10px;border-radius:50%;background:#cfc6b0}
+.browser .scr{aspect-ratio:16/10;background:url(img/hero.jpg) center/cover;position:relative}
+.browser .scr::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(10,42,32,.92),rgba(10,42,32,.2))}
+.browser .scr div{position:absolute;inset-inline-start:7%;top:28%;z-index:2;color:#fff;max-width:60%}
+.browser .scr b{font-family:var(--display);font-size:clamp(20px,2.6vw,32px);display:block;line-height:1.35}
+.browser .scr span{display:inline-block;margin-top:12px;background:var(--gold);color:var(--green-deep);padding:6px 14px;border-radius:99px;font-size:13px;font-weight:700}
+.sample-cap{margin-top:14px;font-weight:700;color:var(--green)}
+.sample-cap small{display:block;color:var(--muted);font-weight:500}
+.cta{background:var(--green-deep);border-radius:28px;padding:60px;color:var(--cream);text-align:center}
+.cta h2{color:var(--cream)}
+.cta p{color:rgba(247,241,227,.75);max-width:620px;margin:0 auto 30px}
+@media (max-width:960px){
+  .audit,.deliv,.idb,.samples,.plans,.terms{grid-template-columns:1fr}
+  .profile{grid-template-columns:1fr 1fr}
+  .sitemap{grid-template-columns:repeat(3,1fr)}
+  .plan.pop{transform:none}
+  .ph-row{grid-template-columns:1fr;gap:6px}
+  .cta{padding:40px 22px}
+}
+@media (max-width:560px){
+  .mock-row,.profile{grid-template-columns:1fr}
+  .sitemap{grid-template-columns:1fr 1fr}
+  .swatches{grid-template-columns:1fr 1fr}
+  .dv ul{columns:1}
+  .items th,.items td{padding:12px}
+  .box,.dv{padding:24px}
+}
+@media print{.nav{display:none}.reveal{opacity:1;transform:none}section{padding:40px 0}}
+</style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <a href="#top" class="brand"><img src="img/logo.jpg" alt="شعار ركائز"><span><b>ركائز</b><small>عرض فني ومالي</small></span></a>
+    <nav class="links" id="links">
+      <a href="#vision">التصور</a><a href="#identity">الهوية</a><a href="#plan">الخطة</a><a href="#pricing">عرض السعر</a><a href="#samples">النماذج</a>
+    </nav>
+    <a href="index.html" class="btn btn-gold">شاهد النموذج الحي</a>
+    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="wrap">
+    <span class="eyebrow">عرض مقدَّم لشركة ركائز لإنشاءات وإدارة الأوقاف</span>
+    <h1>تصور متكامل لبناء <em>حضور رقمي يليق</em> بعراقة ركائز</h1>
+    <p>الموقع الإلكتروني، الهوية البصرية، الملف التعريفي، والمحتوى — في منظومة واحدة متناسقة، مع خطة تنفيذ واضحة وعرض سعر شفاف.</p>
+    <div class="actions">
+      <a href="#vision" class="btn btn-gold">ابدأ القراءة ←</a>
+      <a href="index.html" class="btn btn-ghost">الموقع المقترح (نموذج حي)</a>
+    </div>
+    <div class="meta">
+      <div><b>مقدَّم من</b>م. سها سامي</div>
+      <div><b>تاريخ العرض</b>21 أكتوبر 2026</div>
+      <div><b>مدة التنفيذ</b>5 – 6 أسابيع</div>
+      <div><b>صلاحية العرض</b>30 يوماً</div>
+    </div>
+  </div>
+</section>
+
+<!-- 01 audit -->
+<section id="audit">
+  <div class="wrap">
+    <span class="eyebrow">01 · قراءة الوضع الحالي</span>
+    <h2>نقطة انطلاق جيدة، تحتاج إلى نضج.</h2>
+    <p class="lead">راجعنا النسخة الحالية من الموقع والشعار. الأساس موجود والرسائل واضحة، والمطلوب تحويله إلى منظومة احترافية قابلة للنمو.</p>
+    <div class="audit">
+      <div class="box ok reveal"><h3>ما نبني عليه</h3><ul>
+        <li>رسالة واضحة: «نؤسس للأوقاف بعراقة الماضي ورؤية المستقبل».</li>
+        <li>ألوان مميزة (الأخضر الملكي والذهبي والعاجي) تناسب القطاع.</li>
+        <li>تقسيم منطقي للخدمات الثلاث: استشارات، إدارة وتشغيل، إنشاءات.</li>
+        <li>صور معمارية بطابع سعودي إسلامي معاصر.</li>
+      </ul></div>
+      <div class="box gap reveal"><h3>ما نطوّره</h3><ul>
+        <li>الشعار الحالي صورة ثلاثية الأبعاد؛ يحتاج نسخة مسطحة (Vector) للطباعة والأختام واللافتات.</li>
+        <li>لا يوجد دليل هوية، فيتغير شكل العلامة بين وسيط وآخر.</li>
+        <li>نموذج التواصل غير مفعّل، ولا توجد بيانات تواصل أو واتساب.</li>
+        <li>لا توجد صفحات تفصيلية للمشاريع والخدمات ولا نسخة إنجليزية ولا تهيئة لمحركات البحث.</li>
+        <li>لا يوجد ملف تعريفي (Company Profile) قابل للتحميل والمشاركة.</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 vision -->
+<section class="dark pattern" id="vision">
+  <div class="wrap">
+    <span class="eyebrow">02 · التصور المقترح</span>
+    <h2>أربعة عناصر، هوية واحدة.</h2>
+    <p class="lead">كل عنصر مصمم ليغذي الآخر: الهوية تحدد الشكل، المحتوى يحدد الصوت، والموقع والبروفايل يحملان الرسالة للعميل.</p>
+    <div class="deliv">
+      <div class="dv reveal"><span class="tag">الهوية البصرية</span><h3>علامة راسخة في كل وسيط</h3><p>تطوير الشعار الحالي دون فقدان روحه، وبناء نظام بصري كامل.</p><ul>
+        <li>نسخة Vector مسطحة من الشعار</li><li>نسخ أفقية ورأسية وأيقونة</li><li>لوحة ألوان معتمدة</li><li>نظام خطوط عربي/إنجليزي</li><li>زخرفة وأنماط خاصة بركائز</li><li>دليل هوية (Brand Guidelines)</li><li>كروت وأوراق رسمية وظرف</li><li>قوالب سوشيال ميديا</li>
+      </ul></div>
+      <div class="dv reveal"><span class="tag">الموقع الإلكتروني</span><h3>موقع يُقنع الواقف ويجلب الفرص</h3><p>موقع سريع ومتجاوب بالعربية والإنجليزية، سهل التحديث من لوحة تحكم.</p><ul>
+        <li>تصميم UI/UX مخصص</li><li>عربي وإنجليزي (RTL/LTR)</li><li>صفحات خدمات ومشاريع تفصيلية</li><li>نموذج تواصل مفعّل + واتساب</li><li>تهيئة SEO وسرعة عالية</li><li>لوحة تحكم لإضافة المشاريع</li><li>ربط Google Analytics</li><li>استضافة ونطاق وشهادة SSL</li>
+      </ul></div>
+      <div class="dv reveal"><span class="tag">الملف التعريفي</span><h3>بروفايل يُقدَّم للجهات والواقفين</h3><p>ملف تعريفي فاخر من 12–16 صفحة بنسخة رقمية وأخرى للطباعة.</p><ul>
+        <li>غلاف وتصميم داخلي مخصص</li><li>الرؤية والرسالة والقيم</li><li>الخدمات ومنهجية العمل</li><li>نماذج المشاريع</li><li>الإنفوجرافيك والأرقام</li><li>نسخة PDF تفاعلية</li><li>ملف جاهز للمطبعة</li><li>ربطه بالموقع للتحميل</li>
+      </ul></div>
+      <div class="dv reveal"><span class="tag">المحتوى</span><h3>صوت مؤسسي واثق وقريب</h3><p>كتابة محتوى عربي رصين بلغة القطاع الوقفي، مع ترجمة احترافية.</p><ul>
+        <li>نبرة صوت العلامة</li><li>محتوى صفحات الموقع</li><li>نصوص البروفايل</li><li>وصف الخدمات والمشاريع</li><li>ترجمة إنجليزية</li><li>كلمات مفتاحية للبحث</li><li>12 منشوراً افتتاحياً</li><li>شعار نصي (Tagline)</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 identity -->
+<section id="identity">
+  <div class="wrap">
+    <span class="eyebrow">03 · لمحة من الهوية</span>
+    <h2>نفس الروح، بانضباط أعلى.</h2>
+    <p class="lead">لا نعيد اختراع ركائز؛ نستخرج من الشعار الحالي عناصره الأصيلة — الأخضر الملكي، الذهبي، الموجة والورقة — ونحوّلها إلى نظام قابل للتطبيق في كل مكان.</p>
+    <div class="idb">
+      <div class="box reveal"><h3>لوحة الألوان</h3>
+        <div class="swatches">
+          <div class="sw" style="background:#0f3d2e;color:#f7f1e3">أخضر ركائز<small>#0F3D2E</small></div>
+          <div class="sw" style="background:#c9a24a;color:#0a2a20">ذهبي الوقف<small>#C9A24A</small></div>
+          <div class="sw" style="background:#f7f1e3;color:#0f3d2e">عاجي<small>#F7F1E3</small></div>
+          <div class="sw" style="background:#0a2a20;color:#e3c67b">أخضر عميق<small>#0A2A20</small></div>
+        </div>
+      </div>
+      <div class="box reveal"><h3>نظام الخطوط</h3>
+        <div class="type-row"><span style="font-family:Amiri;font-size:34px;color:var(--green)">أميري — للعناوين</span><small>Display</small></div>
+        <div class="type-row"><span style="font-size:22px;font-weight:700;color:var(--green)">تجوال — للنصوص</span><small>Body</small></div>
+        <div class="type-row"><span style="font-family:'Cormorant Garamond';font-size:26px;letter-spacing:6px;color:var(--gold)">RAKAZ</span><small>Latin</small></div>
+      </div>
+    </div>
+    <div class="mock-row">
+      <div class="reveal"><div class="card-mock card-front"><span class="ar">ركائز</span><span class="en">RAKAZ</span></div><p class="sample-cap">بطاقة العمل — الوجه<small>تطبيق مسطح للشعار على الأخضر</small></p></div>
+      <div class="reveal"><div class="card-mock card-back"><div><b>الاسم الكامل</b><div class="l">المسمى الوظيفي</div></div><div class="l">الجوال · البريد الإلكتروني<br>المملكة العربية السعودية</div><div class="wave"></div></div><p class="sample-cap">بطاقة العمل — الظهر<small>موجة الشعار كعنصر بصري متكرر</small></p></div>
+    </div>
+  </div>
+</section>
+
+<!-- profile preview -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">لمحة من الملف التعريفي</span>
+    <h2>بروفايل يُفتح بثقة على أي طاولة.</h2>
+    <div class="profile">
+      <div class="pg cover reveal"><img src="img/logo.jpg" alt="" style="width:64px;border-radius:50%"><div><small style="color:var(--gold-2)">الملف التعريفي 2026</small><h3>نؤسس للأوقاف بعراقة الماضي ورؤية المستقبل</h3></div></div>
+      <div class="pg reveal"><div class="ph"></div><div class="bd"><small style="color:var(--gold);font-weight:700">من نحن</small><h3 style="font-size:20px">ركائز راسخة لمستقبل أكثر استدامة</h3><div class="bar"></div><div class="bar"></div><div class="bar" style="width:70%"></div><div class="bar g"></div></div></div>
+      <div class="pg inner2 reveal"><small style="color:var(--gold);font-weight:700">أثرنا بالأرقام</small><h3 style="font-size:20px">مؤشرات الأداء</h3><div class="kpi"><div><b>03</b><span>مجالات تخصص</span></div><div><b>360°</b><span>خدمة متكاملة</span></div><div><b>2030</b><span>رؤية المملكة</span></div><div><b>∞</b><span>أثر ممتد</span></div></div><div class="bar" style="height:7px;border-radius:9px;background:var(--cream-2);margin:18px 0 9px"></div><div style="height:7px;border-radius:9px;background:var(--cream-2);width:80%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 plan -->
+<section id="plan" class="pattern" style="background-color:var(--cream-2)">
+  <div class="wrap">
+    <span class="eyebrow">04 · هيكل الموقع وخطة التنفيذ</span>
+    <h2>خريطة واضحة، وجدول زمني ملتزم.</h2>
+    <div class="sitemap">
+      <div>الرئيسية<small>الرسالة والخدمات</small></div>
+      <div>من نحن<small>الرؤية والقيم</small></div>
+      <div>الخدمات<small>3 صفحات تفصيلية</small></div>
+      <div>المشاريع<small>معرض + تفاصيل</small></div>
+      <div>المركز الإعلامي<small>أخبار ومقالات</small></div>
+      <div>تواصل معنا<small>نموذج + واتساب</small></div>
+    </div>
+    <div class="tl">
+      <div class="ph-row reveal"><span class="wk">الأسبوع 1</span><div class="ph-bar"><b>الاكتشاف والمحتوى</b><span>جلسة تعريفية، جمع البيانات، تحديد نبرة الصوت، وكتابة المسودة الأولى للمحتوى.</span></div></div>
+      <div class="ph-row reveal"><span class="wk">الأسبوع 2 – 3</span><div class="ph-bar"><b>الهوية البصرية</b><span>تطوير الشعار ونسخه، الألوان والخطوط، المطبوعات، ثم دليل الهوية. جولتا تعديل.</span></div></div>
+      <div class="ph-row reveal"><span class="wk">الأسبوع 3 – 5</span><div class="ph-bar"><b>تصميم وبرمجة الموقع</b><span>تصميم الواجهات واعتمادها، ثم البرمجة بالعربية والإنجليزية ولوحة التحكم.</span></div></div>
+      <div class="ph-row reveal"><span class="wk">الأسبوع 4 – 5</span><div class="ph-bar"><b>الملف التعريفي</b><span>تصميم البروفايل بالتوازي مع الموقع، ونسخ رقمية وطباعية.</span></div></div>
+      <div class="ph-row reveal"><span class="wk">الأسبوع 6</span><div class="ph-bar"><b>الاختبار والإطلاق</b><span>اختبار على الأجهزة، تهيئة SEO، الإطلاق على النطاق، وتدريب الفريق على لوحة التحكم.</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 pricing -->
+<section id="pricing">
+  <div class="wrap">
+    <span class="eyebrow">05 · عرض السعر</span>
+    <h2>باقات مرنة حسب احتياجكم.</h2>
+    <p class="lead">الأسعار بالريال السعودي. تشمل جميع ملفات المصدر وحقوق الملكية الكاملة لشركة ركائز.</p>
+    <div class="plans">
+      <div class="plan reveal"><h3>الانطلاقة</h3><p class="sub">تطوير الموقع الحالي وتفعيله</p><div class="price">7,500 <small>ر.س</small></div><ul>
+        <li>تطوير الموقع (6 صفحات) عربي</li><li>محتوى صفحات الموقع</li><li>نموذج تواصل + واتساب</li><li>تهيئة SEO أساسية</li><li>نسخة مسطحة من الشعار</li></ul>
+        <a href="#contact" class="btn btn-green">اختيار الباقة</a></div>
+      <div class="plan pop reveal"><span class="ribbon">الأنسب لركائز</span><h3>الحضور المتكامل</h3><p class="sub">العناصر الأربعة المطلوبة كاملة</p><div class="price">15,000 <small>ر.س</small></div><ul>
+        <li>الهوية البصرية + دليل الهوية</li><li>موقع عربي/إنجليزي + لوحة تحكم</li><li>ملف تعريفي 12–16 صفحة</li><li>المحتوى كاملاً + الترجمة</li><li>استضافة ونطاق للسنة الأولى</li><li>دعم فني لمدة شهر</li></ul>
+        <a href="#contact" class="btn btn-gold">اختيار الباقة</a></div>
+      <div class="plan reveal"><h3>الشريك</h3><p class="sub">المتكامل + إدارة مستمرة</p><div class="price">21,000 <small>ر.س</small></div><ul>
+        <li>كل ما في «الحضور المتكامل»</li><li>إدارة السوشيال 3 أشهر</li><li>12 منشوراً شهرياً</li><li>تحديث الموقع والمشاريع</li><li>تقرير أداء شهري</li></ul>
+        <a href="#contact" class="btn btn-green">اختيار الباقة</a></div>
+    </div>
+
+    <table class="items reveal">
+      <thead><tr><th>البند (عند الطلب منفرداً)</th><th>التسليمات</th><th>السعر</th></tr></thead>
+      <tbody>
+        <tr><td>الهوية البصرية</td><td>تطوير الشعار، النسخ، الألوان، الخطوط، المطبوعات، دليل الهوية</td><td>4,500 ر.س</td></tr>
+        <tr><td>الموقع الإلكتروني</td><td>تصميم وبرمجة عربي/إنجليزي، لوحة تحكم، SEO</td><td>7,500 ر.س</td></tr>
+        <tr><td>الملف التعريفي</td><td>12–16 صفحة، نسخة رقمية وطباعية</td><td>3,000 ر.س</td></tr>
+        <tr><td>المحتوى والترجمة</td><td>محتوى الموقع والبروفايل، نبرة الصوت، الترجمة</td><td>2,500 ر.س</td></tr>
+        <tr><td>الإجمالي منفرداً · <span style="color:var(--gold)">وفّر 2,500 ر.س بالباقة المتكاملة</span></td><td></td><td>17,500 ر.س</td></tr>
+      </tbody>
+    </table>
+    <div class="terms">
+      <div><b>الدفعات</b>40% عند التعاقد · 30% عند اعتماد الهوية والتصاميم · 30% عند الإطلاق.</div>
+      <div><b>التعديلات</b>جولتا تعديل لكل عنصر، وما يزيد يُتفق عليه.</div>
+      <div><b>الملكية</b>تُسلَّم جميع ملفات المصدر (AI · Figma · الكود) لشركة ركائز.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 06 samples -->
+<section id="samples" style="padding-top:0">
+  <div class="wrap">
+    <span class="eyebrow">06 · نماذج من العمل</span>
+    <h2>لا نَعِد بالكلام، نُريكم النتيجة.</h2>
+    <p class="lead">قبل التعاقد، صممنا نموذجاً حياً للموقع المقترح بهوية ركائز. افتحوه وتصفحوه على الجوال والكمبيوتر.</p>
+    <div class="samples">
+      <div class="reveal"><a class="browser" href="index.html"><div class="bar"><i></i><i></i><i></i></div><div class="scr"><div><b>نؤسس للأوقاف بعراقة الماضي ورؤية المستقبل</b><span>افتح النموذج الحي ←</span></div></div></a><p class="sample-cap">الموقع المقترح لركائز<small>نموذج حي متجاوب — الصفحة الرئيسية كاملة</small></p></div>
+      <div class="reveal" style="display:grid;gap:24px">
+        <div><div class="card-mock card-front" style="aspect-ratio:2.1"><span class="ar">ركائز</span><span class="en">RAKAZ</span></div><p class="sample-cap">تطبيقات الهوية<small>بطاقات، أوراق رسمية، لافتات</small></p></div>
+        <div><div class="pg cover" style="aspect-ratio:2.1;border-radius:14px"><small style="color:var(--gold-2)">Company Profile</small><h3 style="font-size:24px">ركائز · الملف التعريفي</h3></div><p class="sample-cap">الملف التعريفي<small>غلاف وصفحات داخلية</small></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="cta reveal pattern">
+      <span class="eyebrow">الخطوة التالية</span>
+      <h2>لنضع الركيزة الأولى معاً.</h2>
+      <p>جلسة تعريفية لمدة 30 دقيقة نراجع فيها التصور ونعتمد الباقة، ونبدأ التنفيذ خلال 3 أيام عمل من التعاقد.</p>
+      <div class="actions" style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+        <a href="index.html" class="btn btn-gold">شاهد النموذج الحي</a>
+        <a href="#top" class="btn btn-ghost" onclick="print();return false">حفظ العرض PDF</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>عرض مقدَّم إلى شركة ركائز لإنشاءات وإدارة الأوقاف</span>
+    <span>م. سها سامي · 2026</span>
+  </div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+const onScroll=()=>nav.classList.toggle('solid',scrollY>40);onScroll();addEventListener('scroll',onScroll,{passive:true});
+const links=document.getElementById('links');
+document.getElementById('menuBtn').onclick=()=>links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
