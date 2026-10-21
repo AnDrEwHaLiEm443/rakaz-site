@@ -4,166 +4,249 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ركائز | إنشاءات وإدارة الأوقاف</title>
-<meta name="description" content="ركائز شركة سعودية متخصصة في الاستشارات الهندسية وإنشاءات وإدارة وتشغيل الأوقاف، بعراقة الماضي ورؤية المستقبل.">
-<meta property="og:title" content="ركائز | نؤسس للأوقاف بعراقة الماضي ورؤية المستقبل">
-<meta property="og:description" content="حلول متكاملة لتخطيط وتطوير وتشغيل المشاريع الوقفية في المملكة العربية السعودية.">
+<meta name="description" content="ركائز شركة سعودية متخصصة في الاستشارات الهندسية وإنشاءات وإدارة وتشغيل الأوقاف. الأصل يبقى، والأثر يجري.">
+<meta property="og:title" content="ركائز | الأصل يبقى، والأثر يجري">
+<meta property="og:description" content="من فكرة الوقف إلى ريعه: دراسة وتصميم وإنشاء وتشغيل في المملكة العربية السعودية.">
 <meta property="og:image" content="img/hero.jpg">
 <link rel="icon" href="img/favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&family=Readex+Pro:wght@300..600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <clipPath id="arch" clipPathUnits="objectBoundingBox"><path d="M0,1 L0,.38 C0,.17 .3,.06 .5,0 C.7,.06 1,.17 1,.38 L1,1 Z"/></clipPath>
+  <pattern id="khatam" width="64" height="64" patternUnits="userSpaceOnUse">
+    <g fill="none" stroke="#d6b46e" stroke-width="1"><rect x="14" y="14" width="36" height="36"/><rect x="14" y="14" width="36" height="36" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="6"/></g>
+  </pattern>
+</svg>
 
 <header class="nav" id="nav">
   <div class="wrap">
-    <a href="#top" class="brand"><img src="img/logo.jpg" alt="شعار ركائز"><span><b>ركائز</b><small>لإنشاءات وإدارة الأوقاف</small></span></a>
-    <nav class="links" id="links">
-      <a href="#about">من نحن</a><a href="#services">خدماتنا</a><a href="#process">منهجيتنا</a><a href="#projects">مشاريعنا</a><a href="#contact">اتصل بنا</a>
+    <a href="#top" class="brand" aria-label="ركائز، الصفحة الرئيسية"><img src="img/logo.jpg" alt=""><b>ركائز</b></a>
+    <nav class="links" id="links" aria-label="القائمة الرئيسية">
+      <a href="#audience">لمن نعمل</a><a href="#services">خدماتنا</a><a href="#calc">حاسبة الريع</a><a href="#journey">رحلة الوقف</a><a href="#projects">مشاريعنا</a>
     </nav>
-    <a href="#contact" class="btn btn-gold">ناقش مشروعك</a>
-    <button class="menu-btn" id="menuBtn" aria-label="القائمة">☰</button>
+    <a href="#contact" class="btn btn-primary">احجز استشارة</a>
+    <button class="menu-btn" id="menuBtn" aria-label="فتح القائمة" aria-expanded="false" aria-controls="links"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>
   </div>
 </header>
 
+<main>
 <section class="hero" id="top">
-  <div class="hero-bg"></div>
   <div class="wrap">
-    <span class="eyebrow">أصول راسخة · أثر مستدام</span>
-    <h1>نؤسس للأوقاف بعراقة الماضي <em>ورؤية المستقبل</em></h1>
-    <p>نبني أكثر من منشآت؛ نبني أثراً يمتد للأجيال. حلول متكاملة لإنشاءات وإدارة الأوقاف، تجمع أصالة العمارة وكفاءة الاستثمار.</p>
-    <div class="actions">
-      <a href="#services" class="btn btn-gold">اكتشف خدماتنا ←</a>
-      <a href="#projects" class="btn btn-ghost">استعرض مشاريعنا</a>
+    <div>
+      <h1><span>الأصل يبقى،</span><span>والأثر يجري.</span></h1>
+      <p>ركائز شركة سعودية ترافق الواقف من الفكرة إلى الريع: ندرس الأصل، ونصمّمه ونبنيه، ثم نديره لينمو عائده ويصل إلى مصارفه عاماً بعد عام.</p>
+      <div class="actions">
+        <a href="#contact" class="btn btn-primary">احجز استشارة مجانية</a>
+        <a href="#calc" class="btn btn-line" style="color:var(--emerald)">احسب ريع وقفك</a>
+      </div>
     </div>
-    <div class="hero-stats">
-      <div><b>03</b><span>مجالات تخصص متكاملة</span></div>
-      <div><b>360°</b><span>من الفكرة إلى التشغيل</span></div>
-      <div><b>2030</b><span>نواكب رؤية المملكة</span></div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="photo arch"></div>
+      <svg class="outline" viewBox="0 0 100 140" preserveAspectRatio="none"><path pathLength="1" d="M0,140 L0,53 C0,24 30,8.4 50,0 C70,8.4 100,24 100,53 L100,140"/></svg>
+      <div class="tag"><b>وقف يُدار باحتراف</b>دراسة، إنشاء، تشغيل، وتقارير دورية للناظر.</div>
     </div>
   </div>
 </section>
 
-<div class="wrap">
-  <div class="values">
-    <div class="value reveal"><div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7l8-4z"/><path d="M9 12l2 2 4-4"/></svg></div><h3>ثقة تُبنى</h3><p>التزام بالجودة وشفافية كاملة في كل مرحلة من مراحل العمل.</p></div>
-    <div class="value reveal"><div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 21V11"/><path d="M12 11c0-4 3-7 7-7 0 4-3 7-7 7zM12 14c0-3-2.5-5.5-6-5.5 0 3 2.5 5.5 6 5.5z"/></svg></div><h3>أثر يُستدام</h3><p>أوقاف تنمو وتتجدد عوائدها لتخدم المجتمع والأجيال القادمة.</p></div>
-    <div class="value reveal"><div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 21h18M5 21V10l7-6 7 6v11"/><path d="M9 21v-6h6v6"/></svg></div><h3>رؤية تتجدد</h3><p>أصالة سعودية في الهوية المعمارية، بفكر هندسي وإداري حديث.</p></div>
-  </div>
-</div>
-
-<section id="about">
-  <div class="wrap about">
-    <div class="reveal">
-      <span class="eyebrow">من نحن</span>
-      <h2>ركائز راسخة، لمستقبل أكثر استدامة.</h2>
-      <p class="lead">ركائز شركة سعودية متخصصة في إنشاءات وإدارة الأوقاف. نؤمن بأن الوقف استثمار في الإنسان والمستقبل، ونقدم حلولاً متكاملة تبدأ من الفكرة والتخطيط، وتمتد إلى البناء والتشغيل وتنمية الأصول.</p>
-      <ul class="checks">
-        <li>خبرات هندسية متكاملة</li><li>إدارة تنمّي قيمة الأصول</li>
-        <li>جودة في كل التفاصيل</li><li>شراكات طويلة الأمد</li>
-      </ul>
-      <a href="#contact" class="btn btn-green">تعرّف علينا أكثر</a>
+<section class="audience" id="audience">
+  <div class="wrap">
+    <div class="aud-head">
+      <div><h2>لكل واقف طريق.</h2><p class="lead">اختر ما يصفك، لنريك كيف نعمل معك.</p></div>
+      <div class="tabs" role="tablist" aria-label="نوع الواقف">
+        <button role="tab" aria-selected="true" aria-controls="p1" id="t1">الأفراد</button>
+        <button role="tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1">الأسر</button>
+        <button role="tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1">الشركات</button>
+        <button role="tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1">الجمعيات والنظّار</button>
+      </div>
     </div>
-    <div class="about-img reveal">
-      <img src="img/arches.jpg" alt="تفاصيل معمارية لأروقة وقفية" loading="lazy">
-      <div class="badge"><b>وقف</b><div>استثمار في الإنسان والمستقبل</div></div>
+    <div class="panel" role="tabpanel" id="p1" aria-labelledby="t1">
+      <div><small>ما تحتاجه</small><h3>وقف خاص باسمك</h3><p>لديك أرض أو مبلغ وتريد أن يبقى أثره صدقة جارية، دون أن تحمل عبء الإدارة.</p></div>
+      <div><small>ما نقدمه</small><p>نختار معك نوع الأصل الأنسب، ونساعدك في صياغة شروط الوقف ومصارفه، ثم نتولى الإنشاء والتشغيل.</p></div>
+      <div><small>ما تحصل عليه</small><p>أصل مدرّ للدخل، وتقرير سنوي واضح بالريع وما صُرف منه وأين.</p></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+      <div><small>ما تحتاجه</small><h3>وقف عائلي يجمع الأجيال</h3><p>تريد أصلاً يخدم ذرية العائلة ويحفظ الإرث من التفرق.</p></div>
+      <div><small>ما نقدمه</small><p>هيكلة الوقف الذري، وتنظيم دور الناظر والمستفيدين، وتطوير الأصول العائلية القائمة.</p></div>
+      <div><small>ما تحصل عليه</small><p>حوكمة واضحة تمنع الخلاف، وريع منتظم يوزّع وفق شروط الواقف.</p></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+      <div><small>ما تحتاجه</small><h3>وقف مؤسسي للشركة</h3><p>تبحث عن أثر اجتماعي مستدام يتجاوز التبرعات الموسمية.</p></div>
+      <div><small>ما نقدمه</small><p>تصميم وقف يخدم مسؤوليتكم الاجتماعية، وربطه بأهداف الاستدامة لديكم، وإدارة أصوله باحتراف.</p></div>
+      <div><small>ما تحصل عليه</small><p>أثر قابل للقياس، وتقارير جاهزة للإفصاح للمساهمين.</p></div>
+    </div>
+    <div class="panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+      <div><small>ما تحتاجه</small><h3>أوقاف قائمة تحتاج إلى تطوير</h3><p>لديكم أصول وقفية قديمة أو ضعيفة العائد، أو تحتاجون إلى تشغيل محترف.</p></div>
+      <div><small>ما نقدمه</small><p>تقييم الأصول، وإعادة التطوير أو الإحلال، وتشغيل يومي وتحصيل وصيانة.</p></div>
+      <div><small>ما تحصل عليه</small><p>رفع العائد، وتخفيف العبء التشغيلي عن الناظر، وشفافية كاملة.</p></div>
     </div>
   </div>
 </section>
 
-<section class="dark pattern" id="services">
+<section id="services">
   <div class="wrap">
-    <span class="eyebrow">خدماتنا ومجالات عملنا</span>
-    <h2>خبرات تتكامل، وقيمة تتنامى.</h2>
-    <p class="lead">من التخطيط إلى التشغيل، نرافق مشروعكم الوقفي بحلول مدروسة في كل مرحلة.</p>
-    <div class="services">
-      <div class="svc reveal"><span class="num">01</span><div class="ic"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 21l3-9 9-9 6 6-9 9-9 3z"/><path d="M14 4l6 6M6 12l6 6"/></svg></div><h3>الاستشارات الهندسية</h3><p>دراسات جدوى وتخطيط هندسي متكامل للمشاريع الوقفية، لنحوّل رؤيتكم إلى مشاريع قابلة للنمو والاستدامة.</p><a href="#contact">ناقش مشروعك ←</a></div>
-      <div class="svc reveal"><span class="num">02</span><div class="ic"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M3 3v18h18"/><path d="M7 15l4-4 3 3 5-6"/></svg></div><h3>إدارة وتشغيل الأوقاف</h3><p>إدارة احترافية للأصول الوقفية وحلول تشغيلية تحقق الاستدامة، وترفع كفاءة الأداء وتنمّي العوائد.</p><a href="#contact">ناقش مشروعك ←</a></div>
-      <div class="svc reveal"><span class="num">03</span><div class="ic"><svg width="40" height="40" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M4 21V9l8-6 8 6v12"/><path d="M4 21h16M9 21v-5a3 3 0 016 0v5"/></svg></div><h3>الإنشاءات الوقفية</h3><p>تصميم وتنفيذ المشاريع الوقفية بمعايير هندسية عالية، تجمع بين جودة البناء وأصالة الهوية المعمارية.</p><a href="#contact">ناقش مشروعك ←</a></div>
+    <h2>ثلاث خبرات، تحت سقف واحد.</h2>
+    <p class="lead">لا تحتاج إلى التنسيق بين مكتب هندسي ومقاول وشركة إدارة. نتولى المراحل كلها، ونبقى مسؤولين عن النتيجة.</p>
+    <div class="svc-list">
+      <article class="svc">
+        <div class="thumb arch" style="background-image:url(img/arches.jpg)" role="img" aria-label="تفاصيل معمارية"></div>
+        <div><h3>الاستشارات الهندسية</h3><p>نحوّل فكرة الوقف إلى مشروع قابل للتنفيذ ومجدٍ مالياً قبل وضع أول حجر.</p></div>
+        <ul><li>دراسة الجدوى واختيار الأصل</li><li>التصميم المعماري والإنشائي</li><li>الرخص والاعتمادات</li></ul>
+      </article>
+      <article class="svc">
+        <div class="thumb arch" style="background-image:url(img/residences.jpg)" role="img" aria-label="مبنى سكني"></div>
+        <div><h3>الإنشاءات الوقفية</h3><p>تنفيذ بمعايير هندسية عالية، وهوية معمارية تحترم المكان وتدوم طويلاً.</p></div>
+        <ul><li>إدارة التنفيذ والإشراف</li><li>ضبط التكلفة والجدول الزمني</li><li>مواد تقلل كلفة الصيانة مستقبلاً</li></ul>
+      </article>
+      <article class="svc">
+        <div class="thumb arch" style="background-image:url(img/offices.jpg)" role="img" aria-label="مبنى تجاري"></div>
+        <div><h3>إدارة وتشغيل الأوقاف</h3><p>تشغيل يومي يرفع العائد ويحفظ الأصل، مع تقارير يفهمها الناظر بسهولة.</p></div>
+        <ul><li>التأجير والتحصيل</li><li>الصيانة الوقائية</li><li>تقارير ريع ربع سنوية</li></ul>
+      </article>
     </div>
   </div>
 </section>
 
-<section id="process">
+<section class="calc" id="calc">
+  <svg class="bgpat" aria-hidden="true"><rect width="100%" height="100%" fill="url(#khatam)"/></svg>
   <div class="wrap">
-    <span class="eyebrow">منهجيتنا</span>
-    <h2>رحلة الوقف معنا، خطوة بخطوة.</h2>
-    <p class="lead">منهجية واضحة تضمن وضوح الرؤية، وانضباط التنفيذ، واستدامة العائد.</p>
-    <div class="steps">
-      <div class="step reveal"><i>١</i><h3>الدراسة</h3><p>فهم رسالة الواقف ودراسة الأصل والجدوى.</p></div>
-      <div class="step reveal"><i>٢</i><h3>التخطيط</h3><p>تصميم هندسي ونموذج استثماري متوازن.</p></div>
-      <div class="step reveal"><i>٣</i><h3>التنفيذ</h3><p>إنشاء بمعايير جودة صارمة وإشراف مستمر.</p></div>
-      <div class="step reveal"><i>٤</i><h3>التشغيل</h3><p>إدارة الأصل وتنمية العوائد وتقارير دورية.</p></div>
+    <div>
+      <h2>كم يمكن أن يُثمر وقفك؟</h2>
+      <p class="lead">حرّك القيم لترى تقديراً أولياً لريع وقفك السنوي، وكيف يمكن توزيعه بين المصارف والصيانة وتنمية الأصل.</p>
+      <p class="lead" style="margin-top:18px">في الاستشارة نبني الأرقام الحقيقية على أصلك وموقعه.</p>
+      <a href="#contact" class="btn btn-brass" style="margin-top:30px">اطلب دراسة لأصلك</a>
     </div>
+    <div class="calc-box">
+      <div class="field"><label for="v">قيمة الأصل <output id="vo"></output></label><input type="range" id="v" min="1" max="100" step="1" value="20"></div>
+      <div class="field"><label for="g">العائد الإجمالي السنوي <output id="go"></output></label><input type="range" id="g" min="4" max="12" step=".5" value="7"></div>
+      <div class="field"><label for="o">تكاليف التشغيل من العائد <output id="oo"></output></label><input type="range" id="o" min="10" max="35" step="1" value="18"></div>
+      <div class="field"><label for="b">نصيب المصارف الخيرية <output id="bo"></output></label><input type="range" id="b" min="50" max="90" step="5" value="70"></div>
+      <div class="result" aria-live="polite">
+        <div><span>صافي الريع السنوي</span><b id="net"></b></div>
+        <div><span>يصل إلى المصارف خلال 25 عاماً</span><b id="cum"></b></div>
+      </div>
+      <div class="split" aria-hidden="true"><i id="s1" style="background:var(--brass-2)"></i><i id="s2" style="background:#5f9a82"></i><i id="s3" style="background:#e8efe9"></i></div>
+      <div class="legend"><span style="--c:var(--brass-2)" id="l1"></span><span style="--c:#5f9a82" id="l2"></span><span style="--c:#e8efe9" id="l3"></span></div>
+      <p class="disclaimer">تقدير توضيحي يفترض نمو العائد 2% سنوياً، وليس وعداً بعائد استثماري.</p>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="wrap">
+    <h2>رحلة الوقف معنا.</h2>
+    <p class="lead">خمس مراحل واضحة، تعرف في كل منها ما يحدث وما المطلوب منك.</p>
+    <div class="journey-track" role="tablist" aria-label="مراحل الوقف" id="track"></div>
+    <div class="journey-detail" id="jdetail" role="tabpanel" aria-live="polite"></div>
   </div>
 </section>
 
 <section id="projects" style="padding-top:0">
   <div class="wrap">
-    <span class="eyebrow">مشاريعنا · نماذج أعمالنا</span>
     <h2>عمارة تحمل رسالة.</h2>
-    <p class="lead">رؤية معمارية تجمع بين جمال التصميم واستدامة الأثر، وتضع الإنسان في قلب كل مشروع.</p>
-    <div class="projects">
-      <a class="proj reveal" href="#contact"><img src="img/hero.jpg" alt="مجمع وقفي" loading="lazy"><div class="cap"><small>إنشاءات وتطوير</small><h3>المجمعات الوقفية</h3></div></a>
-      <a class="proj reveal" href="#contact"><img src="img/offices.jpg" alt="أصول تجارية" loading="lazy"><div class="cap"><small>إدارة وتشغيل</small><h3>الأصول التجارية</h3></div></a>
-      <a class="proj reveal" href="#contact"><img src="img/residences.jpg" alt="مجمعات سكنية" loading="lazy"><div class="cap"><small>تصميم وتنفيذ</small><h3>المجمعات السكنية</h3></div></a>
+    <p class="lead">نصمم أصولاً وقفية تخدم الناس وتبقى جميلة ومجدية لعقود.</p>
+    <div class="gallery">
+      <figure><div class="img arch" style="background-image:url(img/hero.jpg)" role="img" aria-label="مجمع وقفي بأروقة وحدائق"></div><figcaption><b>المجمعات الوقفية</b><span>إنشاء وتطوير</span></figcaption></figure>
+      <figure><div class="img arch" style="background-image:url(img/offices.jpg)" role="img" aria-label="مبنى أصول تجارية"></div><figcaption><b>الأصول التجارية</b><span>إدارة وتشغيل</span></figcaption></figure>
+      <figure><div class="img arch" style="background-image:url(img/residences.jpg)" role="img" aria-label="مجمع سكني"></div><figcaption><b>المجمعات السكنية</b><span>تصميم وتنفيذ</span></figcaption></figure>
     </div>
     <p class="note">الصور تصورات معمارية توضيحية، وليست توثيقاً لمشاريع منفذة.</p>
   </div>
 </section>
 
-<section style="padding-top:0">
+<section class="principles">
   <div class="wrap">
-    <div class="vision reveal pattern">
-      <b>2030</b>
-      <div><span class="eyebrow">SAUDI VISION</span><h2>نواكب رؤية وطن، ونساهم في مستقبل القطاع الوقفي.</h2><p style="color:rgba(247,241,227,.75)">نعمل على رفع كفاءة الأصول الوقفية وتعظيم أثرها التنموي، انسجاماً مع مستهدفات رؤية المملكة 2030 في تمكين القطاع غير الربحي.</p></div>
+    <div><h2>أمانة قبل أن تكون إدارة.</h2><p style="color:#bcd0c5;max-width:40ch">الوقف مال له حرمة. لذلك نعمل وفق مبادئ لا نتنازل عنها، وننسجم مع مستهدفات رؤية المملكة 2030 في تمكين القطاع غير الربحي.</p></div>
+    <div class="plist">
+      <div><h3>شروط الواقف أولاً</h3><p>كل قرار تشغيلي يُبنى على وثيقة الوقف ومصارفه.</p></div>
+      <div><h3>شفافية كاملة</h3><p>تقارير دورية بالإيرادات والمصروفات والتوزيعات.</p></div>
+      <div><h3>حفظ الأصل</h3><p>صيانة وقائية واحتياطي يحمي الأصل من التآكل.</p></div>
+      <div><h3>شراكة طويلة</h3><p>نقيس نجاحنا بعمر الوقف، لا بموعد التسليم.</p></div>
     </div>
   </div>
 </section>
 
-<section id="contact" class="pattern" style="background-color:var(--cream-2)">
-  <div class="wrap contact">
-    <div class="reveal">
-      <span class="eyebrow">اتصل بنا</span>
-      <h2>لنضع الركيزة الأولى لمشروعكم القادم.</h2>
-      <p class="lead">لكل مشروع عظيم بداية. شاركونا رؤيتكم، ولنبنِ معاً وقفاً يترك أثراً ويصنع مستقبلاً.</p>
-      <ul class="info">
-        <li><span><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 21s7-6 7-12a7 7 0 10-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.5"/></svg></span>المملكة العربية السعودية</li>
-        <li><span><svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></span>جذورنا هنا، وطموحنا يمتد للأجيال.</li>
-      </ul>
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>لنضع الركيزة الأولى.</h2>
+      <p class="lead">أخبرنا عن وقفك أو فكرتك، ونتواصل معك خلال يومي عمل لتحديد موعد الاستشارة.</p>
     </div>
-    <form class="form reveal" id="form">
-      <div class="row">
-        <div><label for="n">الاسم الكامل *</label><input id="n" required></div>
-        <div><label for="p">رقم الجوال</label><input id="p" type="tel" dir="ltr" style="text-align:right"></div>
-      </div>
-      <label for="e">البريد الإلكتروني *</label><input id="e" type="email" required dir="ltr" style="text-align:right">
-      <label for="s">الخدمة المطلوبة</label>
-      <select id="s"><option>الاستشارات الهندسية</option><option>إدارة وتشغيل الأوقاف</option><option>الإنشاءات الوقفية</option><option>استفسار عام</option></select>
-      <label for="m">رسالتك *</label><textarea id="m" rows="4" required></textarea>
-      <button class="btn btn-green" type="submit">إرسال الرسالة</button>
-      <p class="note" id="formNote">النموذج للمعاينة حالياً؛ يُربط بالبريد أو واتساب عند الإطلاق.</p>
+    <form class="form" id="form" novalidate>
+      <div><label for="n">الاسم</label><input id="n" name="name" required autocomplete="name"></div>
+      <div><label for="p">رقم الجوال</label><input id="p" name="phone" type="tel" dir="ltr" style="text-align:right" placeholder="05xxxxxxxx" autocomplete="tel"></div>
+      <div class="full"><label for="e">البريد الإلكتروني</label><input id="e" name="email" type="email" dir="ltr" style="text-align:right" required autocomplete="email"></div>
+      <fieldset class="full" style="border:0"><legend style="font-size:14.5px;font-weight:500;margin-bottom:10px;color:var(--ink)">ما الذي تحتاجه؟</legend>
+        <div class="chips">
+          <label><input type="radio" name="svc" value="وقف جديد" checked><span>تأسيس وقف جديد</span></label>
+          <label><input type="radio" name="svc" value="تطوير"><span>تطوير وقف قائم</span></label>
+          <label><input type="radio" name="svc" value="تشغيل"><span>إدارة وتشغيل</span></label>
+          <label><input type="radio" name="svc" value="استشارة"><span>استشارة هندسية</span></label>
+        </div>
+      </fieldset>
+      <div class="full"><label for="m">نبذة عن الأصل أو الفكرة</label><textarea id="m" rows="4" placeholder="مثال: أرض في الرياض مساحتها 1,200 م² وأرغب في وقفها على تعليم الأيتام"></textarea></div>
+      <div class="full" style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><button class="btn btn-primary" type="submit">أرسل الطلب</button><span class="form-status" id="status" role="status">هذا نموذج معاينة ويُربط بالبريد أو واتساب عند الإطلاق.</span></div>
     </form>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="wrap">
-    <a href="#top" class="brand"><img src="img/logo.jpg" alt=""><span><b>ركائز</b><small>لإنشاءات وإدارة الأوقاف</small></span></a>
-    <span>عراقة في التأسيس، استدامة في الأثر.</span>
-    <span>© 2026 ركائز. جميع الحقوق محفوظة.</span>
+    <a href="#top" class="brand"><img src="img/logo.jpg" alt=""><b>ركائز</b></a>
+    <span>لإنشاءات وإدارة الأوقاف، المملكة العربية السعودية</span>
+    <span>© 2026 ركائز</span>
   </div>
 </footer>
 
 <script>
-const nav=document.getElementById('nav');
-const onScroll=()=>nav.classList.toggle('solid',scrollY>40);onScroll();addEventListener('scroll',onScroll,{passive:true});
-const links=document.getElementById('links');
-document.getElementById('menuBtn').onclick=()=>links.classList.toggle('open');
-links.querySelectorAll('a').forEach(a=>a.onclick=()=>links.classList.remove('open'));
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-document.getElementById('form').onsubmit=e=>{e.preventDefault();document.getElementById('formNote').textContent='شكراً لتواصلكم! (معاينة — لم تُرسل الرسالة فعلياً)';e.target.reset()};
+const $=id=>document.getElementById(id);
+const nav=$('nav');addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+const links=$('links'),mb=$('menuBtn');
+mb.onclick=()=>{const o=links.classList.toggle('open');mb.setAttribute('aria-expanded',o)};
+links.querySelectorAll('a').forEach(a=>a.onclick=()=>{links.classList.remove('open');mb.setAttribute('aria-expanded',false)});
+
+// tabs with arrow-key support
+function tabs(list,onSelect){
+  const btns=[...list.querySelectorAll('[role=tab]')];
+  const select=b=>{btns.forEach(x=>{const on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1});onSelect(b,btns.indexOf(b))};
+  btns.forEach((b,i)=>{b.onclick=()=>select(b);b.onkeydown=e=>{
+    const d=e.key==='ArrowLeft'?1:e.key==='ArrowRight'?-1:0; // RTL
+    if(d){e.preventDefault();const n=btns[(i+d+btns.length)%btns.length];n.focus();select(n)}}});
+}
+tabs(document.querySelector('.tabs'),b=>{document.querySelectorAll('.panel').forEach(p=>p.hidden=p.id!==b.getAttribute('aria-controls'))});
+
+// journey
+const stages=[
+ ['الفكرة والتوثيق','نستمع إلى نيتك ومصارف الوقف التي تريدها، ونساعدك في صياغة الشروط وإجراءات التوثيق والتسجيل لدى الجهات المختصة.',['تحديد المصارف والمستفيدين','صياغة شروط الوقف','اختيار الناظر']],
+ ['دراسة الجدوى','نقيّم الأصل أو نختاره معك، ونقارن بين بدائل الاستثمار لنصل إلى أعلى عائد بأقل مخاطرة.',['تقييم الموقع والسوق','سيناريوهات العائد','توصية مكتوبة']],
+ ['التصميم والإنشاء','تصميم معماري بهوية أصيلة، وتنفيذ تحت إشرافنا بجدول وتكلفة معتمدين.',['تصميم معماري وإنشائي','الرخص والاعتمادات','إشراف وتقارير تنفيذ']],
+ ['التشغيل','نتولى التأجير والتحصيل والصيانة، فلا يحمل الناظر عبء التفاصيل اليومية.',['تسويق وتأجير','تحصيل وصيانة','احتياطي لحفظ الأصل']],
+ ['الريع والتقارير','يصل الريع إلى مصارفه في موعده، مع تقارير واضحة بكل ما دخل وما صُرف.',['توزيع وفق الشروط','تقرير ربع سنوي','مراجعة سنوية للأداء']]
+];
+const track=$('track'),jd=$('jdetail');
+track.innerHTML=stages.map((s,i)=>`<button role="tab" aria-selected="${i===0}" tabindex="${i?-1:0}"><i>${'١٢٣٤٥'[i]}</i><span>${s[0]}</span></button>`).join('');
+const showStage=(b,i)=>{const s=stages[i];jd.innerHTML=`<div><h3>${s[0]}</h3><p style="color:var(--muted)">${s[1]}</p></div><ul>${s[2].map(x=>`<li>${x}</li>`).join('')}</ul>`};
+tabs(track,showStage);showStage(null,0);
+
+// calculator
+const fmt=n=>n>=1e6?(n/1e6).toLocaleString('en-US',{maximumFractionDigits:1})+' مليون ر.س':Math.round(n/1e3).toLocaleString('en-US')+' ألف ر.س';
+function calc(){
+  const V=$('v').value*1e6,g=$('g').value/100,o=$('o').value/100,b=$('b').value/100;
+  const maint=Math.min(.2,1-b),grow=Math.max(0,1-b-maint);
+  $('vo').textContent=fmt(V);$('go').textContent=$('g').value+'%';$('oo').textContent=$('o').value+'%';$('bo').textContent=Math.round(b*100)+'%';
+  const net=V*g*(1-o);let cum=0;for(let y=0;y<25;y++)cum+=net*b*Math.pow(1.02,y);
+  $('net').textContent=fmt(net);$('cum').textContent=fmt(cum);
+  [[b,'المصارف'],[maint,'الصيانة'],[grow,'تنمية الأصل']].forEach(([w,l],i)=>{$('s'+(i+1)).style.width=w*100+'%';$('l'+(i+1)).textContent=`${l} ${Math.round(w*100)}%`});
+}
+['v','g','o','b'].forEach(id=>$(id).oninput=calc);calc();
+
+// form
+$('form').onsubmit=e=>{e.preventDefault();const f=e.target,st=$('status');
+  if(!f.elements.name.value.trim()||!f.elements.email.checkValidity()){st.className='form-status';st.textContent='أدخل الاسم وبريداً إلكترونياً صحيحاً لنتمكن من الرد عليك.';return}
+  st.className='form-status ok';st.textContent='تم استلام طلبك. (معاينة: لم يُرسل فعلياً بعد)';f.reset()};
 </script>
 </body>
 </html>
