@@ -232,13 +232,14 @@ const showStage=(b,i)=>{const s=stages[i];jd.innerHTML=`<div><h3>${s[0]}</h3><p 
 tabs(track,showStage);showStage(null,0);
 
 // calculator
-const fmt=n=>n>=1e6?(n/1e6).toLocaleString('en-US',{maximumFractionDigits:1})+' مليون ر.س':Math.round(n/1e3).toLocaleString('en-US')+' ألف ر.س';
+const SAR='<span class="sar" role="img" aria-label="ريال سعودي"></span>';
+const fmt=n=>n>=1e6?(n/1e6).toLocaleString('en-US',{maximumFractionDigits:1})+' مليون '+SAR:Math.round(n/1e3).toLocaleString('en-US')+' ألف '+SAR;
 function calc(){
   const V=$('v').value*1e6,g=$('g').value/100,o=$('o').value/100,b=$('b').value/100;
   const maint=Math.min(.2,1-b),grow=Math.max(0,1-b-maint);
-  $('vo').textContent=fmt(V);$('go').textContent=$('g').value+'%';$('oo').textContent=$('o').value+'%';$('bo').textContent=Math.round(b*100)+'%';
+  $('vo').innerHTML=fmt(V);$('go').textContent=$('g').value+'%';$('oo').textContent=$('o').value+'%';$('bo').textContent=Math.round(b*100)+'%';
   const net=V*g*(1-o);let cum=0;for(let y=0;y<25;y++)cum+=net*b*Math.pow(1.02,y);
-  $('net').textContent=fmt(net);$('cum').textContent=fmt(cum);
+  $('net').innerHTML=fmt(net);$('cum').innerHTML=fmt(cum);
   [[b,'المصارف'],[maint,'الصيانة'],[grow,'تنمية الأصل']].forEach(([w,l],i)=>{$('s'+(i+1)).style.width=w*100+'%';$('l'+(i+1)).textContent=`${l} ${Math.round(w*100)}%`});
 }
 ['v','g','o','b'].forEach(id=>$(id).oninput=calc);calc();
