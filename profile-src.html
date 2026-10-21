@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>ركائز | الملف التعريفي</title>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400..700&family=Readex+Pro:wght@300..600&display=swap" rel="stylesheet">
+<style>
+@page{size:A4;margin:0}
+:root{--ink:#0e2a22;--emerald:#12513f;--deep:#0a2019;--brass:#b48a3c;--brass-2:#d6b46e;--sage:#e6eee8;--muted:#5b6b64;--line:#d7e0da}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"Readex Pro",sans-serif;color:#22332d;font-weight:350;font-size:12pt;line-height:1.75}
+h1,h2,h3{font-family:"Reem Kufi",sans-serif;font-weight:600;color:var(--ink);line-height:1.2}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;padding:22mm 20mm}
+.page:last-child{page-break-after:auto}
+.arch{clip-path:url(#arch)}
+.pat{position:absolute;inset:0;width:100%;height:100%}
+.foot{position:absolute;bottom:12mm;inset-inline:20mm;display:flex;justify-content:space-between;font-size:9pt;color:var(--muted);border-top:1px solid var(--line);padding-top:4mm}
+/* cover */
+.cover{background:var(--deep);color:#dfe8e2;display:flex;flex-direction:column;justify-content:flex-start}
+.cover .txt{margin-top:auto;margin-bottom:12mm}
+.cover .pat{opacity:.1}
+.cover>*:not(.photo):not(.pat){position:relative}
+.cover .top{display:flex;align-items:center;gap:5mm}
+.cover .top img{width:20mm;height:20mm;border-radius:50%}
+.cover .top b{font-family:"Reem Kufi";font-size:24pt;color:#fff;font-weight:500}
+.cover .photo{position:absolute;top:44mm;left:20mm;width:80mm;height:122mm;background:url(img/hero.jpg) 38% center/cover}
+.cover h1{color:#fff;font-size:44pt;line-height:1.1;max-width:95mm}
+.cover h1 span{display:block;color:var(--brass-2)}
+.cover .meta{display:flex;justify-content:space-between;font-size:10.5pt;color:#a9bdb3;border-top:1px solid rgba(214,180,110,.35);padding-top:5mm}
+/* inner */
+.kicker{font-size:10pt;color:var(--brass);font-weight:500;margin-bottom:3mm}
+h2{font-size:28pt;margin-bottom:6mm}
+.lead{font-size:12.5pt;color:var(--muted);max-width:150mm}
+.two{display:grid;grid-template-columns:1fr 62mm;gap:12mm;margin-top:10mm;align-items:start}
+.two .img{height:84mm;background:url(img/arches.jpg) center/cover}
+.vm{display:grid;gap:6mm}
+.vm div{border-inline-start:2.5pt solid var(--brass);padding-inline-start:5mm}
+.vm h3{font-size:14pt;margin-bottom:1mm}
+.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:14mm}
+.vals div{background:var(--sage);border-radius:4mm;padding:6mm}
+.vals h3{font-size:13pt;color:var(--emerald);margin-bottom:1.5mm}
+.vals p{font-size:10pt;color:var(--muted);line-height:1.6}
+.svcs{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:8mm}
+.svcs div{border:1px solid var(--line);border-radius:4mm;padding:6mm}
+.svcs h3{font-size:14pt;margin-bottom:1.5mm}
+.svcs p{font-size:10pt;color:var(--muted);line-height:1.6}
+.journey{margin-top:14mm;background:var(--emerald);border-radius:5mm;padding:9mm;color:#dfe8e2}
+.journey h3{color:#fff;font-size:16pt;margin-bottom:6mm}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm}
+.steps div{font-size:9.5pt;line-height:1.55;color:#bcd0c5}
+.steps b{display:grid;place-items:center;width:10mm;height:10mm;border-radius:50%;background:var(--brass-2);color:var(--deep);font-family:"Reem Kufi";font-size:12pt;margin-bottom:3mm}
+.steps strong{display:block;color:#fff;font-weight:500;font-size:10.5pt}
+.aud{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:8mm}
+.aud div{padding:6mm;border-radius:4mm;background:var(--sage)}
+.aud h3{font-size:14pt;color:var(--emerald);margin-bottom:1.5mm}
+.aud p{font-size:10pt;color:var(--muted);line-height:1.6}
+.close{margin-top:14mm;background:var(--deep);color:#dfe8e2;border-radius:5mm;padding:12mm 10mm;position:relative;overflow:hidden}
+.close .pat{opacity:.1}
+.close>*{position:relative}
+.close h2{color:#fff;font-size:24pt;margin-bottom:3mm}
+.close p{color:#a9bdb3}
+.close dl{display:grid;grid-template-columns:auto 1fr;gap:3mm 8mm;margin-top:7mm;font-size:11pt}
+.close dt{color:#86998f}.close dd{color:#fff}
+.note{font-size:8.5pt;color:var(--muted);margin-top:4mm}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <clipPath id="arch" clipPathUnits="objectBoundingBox"><path d="M0,1 L0,.38 C0,.17 .3,.06 .5,0 C.7,.06 1,.17 1,.38 L1,1 Z"/></clipPath>
+  <pattern id="khatam" width="64" height="64" patternUnits="userSpaceOnUse"><g fill="none" stroke="#d6b46e" stroke-width="1"><rect x="14" y="14" width="36" height="36"/><rect x="14" y="14" width="36" height="36" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="6"/></g></pattern>
+</svg>
+
+<section class="page cover">
+  <svg class="pat"><rect width="100%" height="100%" fill="url(#khatam)"/></svg>
+  <div class="top"><img src="img/logo.jpg" alt=""><b>ركائز</b></div>
+  <div class="photo arch"></div>
+  <div class="txt">
+    <p style="color:var(--brass-2);font-size:11pt;margin-bottom:5mm">الملف التعريفي</p>
+    <h1>الأصل يبقى،<span>والأثر يجري.</span></h1>
+    <p style="max-width:95mm;margin-top:6mm;color:#a9bdb3">شركة سعودية متخصصة في الاستشارات الهندسية وإنشاءات وإدارة وتشغيل الأوقاف.</p>
+  </div>
+  <div class="meta"><span>ركائز لإنشاءات وإدارة الأوقاف</span><span>1448هـ / 2026م</span></div>
+</section>
+
+<section class="page">
+  <p class="kicker">من نحن</p>
+  <h2>ركائز راسخة، لمستقبل أكثر استدامة.</h2>
+  <p class="lead">نؤمن بأن الوقف استثمار في الإنسان والمستقبل، وأنه صدقة جارية تستحق أن تُدار بأعلى درجات الأمانة والاحتراف. لذلك نرافق الواقف من الفكرة إلى الريع: ندرس الأصل، ونصمّمه ونبنيه، ثم نديره لينمو عائده ويصل إلى مصارفه.</p>
+  <div class="two">
+    <div class="vm">
+      <div><h3>رؤيتنا</h3><p>أن نكون الشريك الأول للواقفين في المملكة لبناء أوقاف تدوم وتُثمر.</p></div>
+      <div><h3>رسالتنا</h3><p>تأسيس الأوقاف وتطويرها وتشغيلها بخبرة هندسية وإدارية متكاملة، ووفق شروط الواقف وأنظمة الهيئة العامة للأوقاف.</p></div>
+      <div><h3>رؤية 2030</h3><p>نسهم في مستهدفات تمكين القطاع غير الربحي ورفع كفاءة الأصول الوقفية.</p></div>
+    </div>
+    <div class="img arch"></div>
+  </div>
+  <div class="vals">
+    <div><h3>شروط الواقف أولاً</h3><p>كل قرار يُبنى على وثيقة الوقف ومصارفه.</p></div>
+    <div><h3>شفافية كاملة</h3><p>تقارير دورية بالإيرادات والمصروفات والتوزيعات.</p></div>
+    <div><h3>حفظ الأصل</h3><p>صيانة وقائية واحتياطي يحمي الأصل من التآكل.</p></div>
+    <div><h3>سرية تامة</h3><p>بيانات الواقف وأصوله لا تُشارك مع أي طرف.</p></div>
+    <div><h3>امتثال للأنظمة</h3><p>نعمل وفق أنظمة الهيئة العامة للأوقاف ولوائحها.</p></div>
+    <div><h3>شراكة طويلة</h3><p>نقيس نجاحنا بعمر الوقف، لا بموعد التسليم.</p></div>
+  </div>
+  <div class="foot"><span>ركائز | الملف التعريفي</span><span>02</span></div>
+</section>
+
+<section class="page">
+  <p class="kicker">خدماتنا</p>
+  <h2>من الفكرة إلى الريع، تحت سقف واحد.</h2>
+  <p class="lead">لا يحتاج الواقف إلى التنسيق بين مكتب هندسي ومقاول وشركة إدارة. نتولى المراحل كلها، ونبقى مسؤولين عن النتيجة.</p>
+  <div class="svcs">
+    <div><h3>الاستشارات الهندسية</h3><p>دراسة الجدوى واختيار الأصل، والتصميم المعماري والإنشائي، والرخص والاعتمادات.</p></div>
+    <div><h3>الإنشاءات الوقفية</h3><p>إدارة التنفيذ والإشراف، وضبط التكلفة والجدول الزمني، ومواد تقلل كلفة الصيانة.</p></div>
+    <div><h3>إدارة وتشغيل الأوقاف</h3><p>التأجير والتحصيل، والصيانة الوقائية، وتقارير ريع ربع سنوية للناظر.</p></div>
+    <div><h3>تطوير الأوقاف المتعثرة</h3><p>تشخيص أسباب التعثر، وإعادة التطوير أو الإحلال، ونموذج تشغيل جديد يرفع العائد.</p></div>
+  </div>
+  <div class="journey">
+    <h3>رحلة الوقف معنا</h3>
+    <div class="steps">
+      <div><b>١</b><strong>الفكرة والتوثيق</strong>صياغة الوثيقة، والتوثيق لدى وزارة العدل، والتسجيل لدى الهيئة العامة للأوقاف.</div>
+      <div><b>٢</b><strong>دراسة الجدوى</strong>تقييم الموقع والسوق، وسيناريوهات العائد.</div>
+      <div><b>٣</b><strong>التصميم والإنشاء</strong>تصميم بهوية أصيلة وتنفيذ تحت إشرافنا.</div>
+      <div><b>٤</b><strong>التشغيل</strong>تأجير وتحصيل وصيانة واحتياطي للأصل.</div>
+      <div><b>٥</b><strong>الريع والتقارير</strong>توزيع وفق الشروط وتقرير ربع سنوي.</div>
+    </div>
+  </div>
+  <div class="foot"><span>ركائز | الملف التعريفي</span><span>03</span></div>
+</section>
+
+<section class="page">
+  <p class="kicker">لمن نعمل</p>
+  <h2>لكل واقفٍ مسارٌ يناسبه.</h2>
+  <div class="aud">
+    <div><h3>الأفراد</h3><p>وقف خاص باسمك يبقى صدقة جارية، دون أن تحمل عبء الإدارة.</p></div>
+    <div><h3>الأسر</h3><p>وقف ذري يجمع الأجيال، بحوكمة واضحة تمنع الخلاف.</p></div>
+    <div><h3>الشركات</h3><p>وقف مؤسسي بأثر قابل للقياس، وتقارير جاهزة للإفصاح.</p></div>
+    <div><h3>الجمعيات والنظّار</h3><p>تطوير الأوقاف القائمة والمتعثرة، وتشغيل يرفع العائد.</p></div>
+  </div>
+  <div class="close">
+    <svg class="pat"><rect width="100%" height="100%" fill="url(#khatam)"/></svg>
+    <h2>لنضع الركيزة الأولى.</h2>
+    <p>كل صدقة جارية تبدأ بخطوة. احجز استشارتك المجانية.</p>
+    <dl>
+      <dt>الموقع الإلكتروني</dt><dd dir="ltr" style="text-align:right">andrewhaliem443.github.io/rakaz-site</dd>
+      <dt>الجوال وواتساب</dt><dd>يُضاف عند الاعتماد</dd>
+      <dt>البريد الإلكتروني</dt><dd>يُضاف عند الاعتماد</dd>
+      <dt>المقر</dt><dd>المملكة العربية السعودية</dd>
+    </dl>
+  </div>
+  <p class="note">نسخة أولية للمعاينة. الصور تصورات معمارية توضيحية، وليست توثيقاً لمشاريع منفذة.</p>
+  <div class="foot"><span>ركائز | الملف التعريفي</span><span>04</span></div>
+</section>
+</body>
+</html>
