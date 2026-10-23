@@ -16,7 +16,7 @@ h1,h2,h3{font-family:"Noto Kufi Arabic",sans-serif;font-weight:700;color:var(--i
 .arch{clip-path:url(#arch)}
 .pat{position:absolute;inset:0;width:100%;height:100%}
 .foot{position:absolute;bottom:11mm;inset-inline:20mm;display:flex;justify-content:space-between;align-items:center;font-size:8.5pt;color:var(--muted);border-top:1px solid var(--line);padding-top:3.5mm}
-.foot img{height:9mm}
+.foot img{height:10mm;width:10mm;border-radius:50%}
 .kicker{font-size:10pt;color:var(--brass);font-weight:500;margin-bottom:2mm}
 h2{font-size:24pt;margin-bottom:5mm}
 .lead{font-size:12.5pt;color:#3c4d46;max-width:160mm}
@@ -29,7 +29,7 @@ h2{font-size:24pt;margin-bottom:5mm}
 .dark .foot{border-color:rgba(214,180,110,.3);color:#86998f}
 /* cover */
 .cover{display:flex;flex-direction:column}
-.cover .logo{height:24mm;align-self:flex-start}
+.cover .logo{height:28mm;width:28mm;border-radius:50%;align-self:flex-start}
 .cover .photo{position:absolute;top:52mm;left:20mm;width:78mm;height:118mm;background:url(img/hero.jpg) 38% center/cover}
 .cover .txt{margin-top:auto;margin-bottom:14mm;max-width:120mm}
 .cover h1{font-size:30pt;line-height:1.55}
@@ -88,7 +88,7 @@ h2{font-size:24pt;margin-bottom:5mm}
 <!-- 1 cover -->
 <section class="page dark cover">
   <svg class="pat"><rect width="100%" height="100%" fill="url(#khatam)"/></svg>
-  <img class="logo" src="img/logo-flat-light.png" alt="ركائز">
+  <img class="logo" src="img/logo.jpg" alt="ركائز">
   <div class="photo arch"></div>
   <div class="txt">
     <p style="color:var(--brass-2);font-size:12pt;margin-bottom:4mm">الملف التعريفي</p>
@@ -112,7 +112,7 @@ h2{font-size:24pt;margin-bottom:5mm}
     <div class="chips"><span>الواقفون</span><span>النظّار</span><span>الأوقاف العائلية والخاصة</span><span>الجهات المالكة أو المشرفة</span></div>
   </div>
   <div class="side-img arch"></div>
-  <div class="foot"><img src="img/logo-flat.png" alt=""><span>02</span></div>
+  <div class="foot"><img src="img/logo.jpg" alt=""><span>02</span></div>
 </section>
 
 <!-- 3 services overview -->
@@ -126,7 +126,7 @@ h2{font-size:24pt;margin-bottom:5mm}
     <div class="tr"><b>٣</b><div><small>تطوير وتنمية الأوقاف</small><h3>نطوّر وننمّي الوقف</h3><p>نقرأ واقع الوقف أولاً، ونحدد ما يحتاج إلى تحسين في تنظيمه وأعماله وممارساته، وما يملكه من فرص لتنمية أصوله وعوائده، ثم نبني خطوات واقعية تعزز كفاءته، وتنمي قدرته على الاستمرار، وتقربه من مقصده.</p></div></div>
   </div>
   <div class="band"><p>ثلاثة مسارات، وغاية واحدة:</p><p>أصل يُصان، وإجراء يُنجز، ووقف تنمو منفعته.</p></div>
-  <div class="foot"><img src="img/logo-flat.png" alt=""><span>03</span></div>
+  <div class="foot"><img src="img/logo.jpg" alt=""><span>03</span></div>
 </section>
 
 <!-- 4 asset management -->
@@ -145,7 +145,7 @@ h2{font-size:24pt;margin-bottom:5mm}
     <div><h3>٦. نكون حيث يحتاجنا الوقف</h3><p>نتابع ميدانياً ما يستلزم الحضور، وننسق بين الأطراف ذات العلاقة، ونشرف على ما يتطلب المتابعة من الأصول والصيانة والأعمال والمواقع والاجتماعات؛ ليبقى صاحب الوقف أو الناظر قريباً من التفاصيل، دون أن ينشغل بكل تفاصيلها.</p></div>
   </div>
   <p class="closing">وفي ركائز، لا تنتهي إدارة الأصل عند تأجيره أو تحصيل ريعه. الإدارة عندنا دورة تبدأ بمعرفة الأصل، وتعيش مع تفاصيله، وتسبق احتياجاته؛ حتى يبقى الأصل مصاناً، وريعه متابعاً، ومنفعته ممتدة.</p>
-  <div class="foot"><img src="img/logo-flat.png" alt=""><span>04</span></div>
+  <div class="foot"><img src="img/logo.jpg" alt=""><span>04</span></div>
 </section>
 
 <!-- 5 beyond the asset: procedures -->
@@ -165,7 +165,7 @@ h2{font-size:24pt;margin-bottom:5mm}
     <li>متابعة الطلبات والاستكمالات عبر الجهات والمنصات ذات العلاقة.</li>
   </ul>
   <p class="closing">نحن لا نملك زمن الجهة؛ لكننا نملك أن نجعل رحلة الإجراء أوضح وأخف على صاحب الوقف.</p>
-  <div class="foot"><img src="img/logo-flat.png" alt=""><span>05</span></div>
+  <div class="foot"><img src="img/logo.jpg" alt=""><span>05</span></div>
 </section>
 
 <!-- 6 development -->
@@ -178,7 +178,7 @@ h2{font-size:24pt;margin-bottom:5mm}
   <p class="lead">وإذا احتاج الوقف إلى تخصص يتجاوز نطاق عملنا، نصل العمل بأهل الاختصاص الشرعي والقانوني والمالي، ونتابع تكامل المسار؛ حتى تبقى احتياجات الوقف مترابطة ولا تتفرق بين التخصصات.</p>
   <p class="lead">فالتطوير والتنمية عندنا ليسا أن نضيف إلى الوقف أعمالاً أكثر؛ بل أن نجعل ما لديه يعمل بصورة أفضل، ونبحث عما يمكن تنميته فيه، ليستمر بكفاءة أعلى، وينفع بصورة أوسع.</p>
   <div class="band"><p>حين تستقيم التفاصيل، يصبح للوقف مساحة أوسع لينمو.</p><p>هذه رحلة نبني ركائزها اليوم، لتبقى منفعتها غداً.</p></div>
-  <div class="foot"><img src="img/logo-flat.png" alt=""><span>06</span></div>
+  <div class="foot"><img src="img/logo.jpg" alt=""><span>06</span></div>
 </section>
 
 <!-- 7 how we work -->
@@ -192,7 +192,7 @@ h2{font-size:24pt;margin-bottom:5mm}
     <div><h3>نسبق السؤال</h3><ul class="asks"><li>متى ينتهي العقد؟</li><li>ماذا تأخر؟</li><li>ماذا يحتاج الأصل؟</li><li>أين وصل الإجراء؟</li><li>وما الخطوة التالية؟</li></ul><p>الإدارة التي نطمح إليها لا تنتظر السؤال حتى تبحث عن الإجابة؛ بل تجعل الإجابة حاضرة حين يحتاجها صاحب القرار.</p></div>
     <div><h3>نتكامل مع أهل الاختصاص</h3><p>نعمل بتكامل يحفظ لكل تخصص دوره، ويجمع الخبرات التي يحتاجها الوقف في مسار واحد؛ لأن الوقف لا ينبغي أن يدفع ثمن تفرق التخصصات.</p></div>
   </div>
-  <div class="foot"><img src="img/logo-flat.png" alt=""><span>07</span></div>
+  <div class="foot"><img src="img/logo.jpg" alt=""><span>07</span></div>
 </section>
 
 <!-- 8 closing + contact -->
@@ -216,7 +216,7 @@ h2{font-size:24pt;margin-bottom:5mm}
     <dt>السجل التجاري</dt><dd>7055004944</dd>
   </dl>
   <p style="margin-top:8mm;font-family:'Noto Kufi Arabic';font-weight:700;color:var(--brass-2);font-size:13pt">ركائز لإدارة وتطوير الأوقاف... نبني اليوم ما تحتاجه المنفعة لتبقى</p>
-  <div class="foot"><img src="img/logo-flat-light.png" alt=""><span>08</span></div>
+  <div class="foot"><img src="img/logo.jpg" alt=""><span>08</span></div>
 </section>
 </body>
 </html>
