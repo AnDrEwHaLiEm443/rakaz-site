@@ -2,66 +2,81 @@
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="utf-8">
-<title>ركائز | الملف التعريفي</title>
+<meta name="robots" content="noindex">
+<title>ركائز لإدارة وتطوير الأوقاف | الملف التعريفي</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400..800&family=Readex+Pro:wght@300..600&display=swap" rel="stylesheet">
 <style>
 @page{size:A4;margin:0}
 :root{--ink:#0e2a22;--emerald:#12513f;--deep:#0a2019;--brass:#b48a3c;--brass-2:#d6b46e;--sage:#e6eee8;--muted:#5b6b64;--line:#d7e0da}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-print-color-adjust:exact;print-color-adjust:exact}
-body{font-family:"Readex Pro",sans-serif;color:#22332d;font-weight:350;font-size:12pt;line-height:1.75}
-h1,h2,h3{font-family:"Noto Kufi Arabic",sans-serif;font-weight:700;color:var(--ink);line-height:1.45}
-.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;padding:22mm 20mm}
+body{font-family:"Readex Pro",sans-serif;color:#22332d;font-weight:350;font-size:11.5pt;line-height:1.85}
+h1,h2,h3{font-family:"Noto Kufi Arabic",sans-serif;font-weight:700;color:var(--ink);line-height:1.5}
+.page{width:210mm;height:297mm;position:relative;overflow:hidden;page-break-after:always;padding:22mm 20mm 26mm}
 .page:last-child{page-break-after:auto}
 .arch{clip-path:url(#arch)}
 .pat{position:absolute;inset:0;width:100%;height:100%}
-.foot{position:absolute;bottom:12mm;inset-inline:20mm;display:flex;justify-content:space-between;font-size:9pt;color:var(--muted);border-top:1px solid var(--line);padding-top:4mm}
+.foot{position:absolute;bottom:11mm;inset-inline:20mm;display:flex;justify-content:space-between;align-items:center;font-size:8.5pt;color:var(--muted);border-top:1px solid var(--line);padding-top:3.5mm}
+.foot img{height:9mm}
+.kicker{font-size:10pt;color:var(--brass);font-weight:500;margin-bottom:2mm}
+h2{font-size:24pt;margin-bottom:5mm}
+.lead{font-size:12.5pt;color:#3c4d46;max-width:160mm}
+.lead+.lead{margin-top:4mm}
+.muted{color:var(--muted)}
+.dark{background:var(--deep);color:#dfe8e2}
+.dark h1,.dark h2,.dark h3{color:#fff}
+.dark .pat{opacity:.09}
+.dark>*:not(.pat):not(.foot){position:relative}
+.dark .foot{border-color:rgba(214,180,110,.3);color:#86998f}
 /* cover */
-.cover{background:var(--deep);color:#dfe8e2;display:flex;flex-direction:column;justify-content:flex-start}
-.cover .txt{margin-top:auto;margin-bottom:12mm}
-.cover .pat{opacity:.1}
-.cover>*:not(.photo):not(.pat){position:relative}
-.cover .top{display:flex;align-items:center;gap:5mm}
-.cover .top img{width:20mm;height:20mm;border-radius:50%}
-.cover .top b{font-family:"Noto Kufi Arabic";font-size:24pt;color:#fff;font-weight:500}
-.cover .photo{position:absolute;top:44mm;left:20mm;width:80mm;height:122mm;background:url(img/hero.jpg) 38% center/cover}
-.cover h1{color:#fff;font-size:38pt;line-height:1.4;max-width:110mm}
-.cover h1 span{display:block;color:var(--brass-2)}
-.cover .meta{display:flex;justify-content:space-between;font-size:10.5pt;color:#a9bdb3;border-top:1px solid rgba(214,180,110,.35);padding-top:5mm}
-/* inner */
-.kicker{font-size:10pt;color:var(--brass);font-weight:500;margin-bottom:3mm}
-h2{font-size:28pt;margin-bottom:6mm}
-.lead{font-size:12.5pt;color:var(--muted);max-width:150mm}
-.two{display:grid;grid-template-columns:1fr 62mm;gap:12mm;margin-top:10mm;align-items:start}
-.two .img{height:84mm;background:url(img/arches.jpg) center/cover}
-.vm{display:grid;gap:6mm}
+.cover{display:flex;flex-direction:column}
+.cover .logo{height:24mm;align-self:flex-start}
+.cover .photo{position:absolute;top:52mm;left:20mm;width:78mm;height:118mm;background:url(img/hero.jpg) 38% center/cover}
+.cover .txt{margin-top:auto;margin-bottom:14mm;max-width:120mm}
+.cover h1{font-size:30pt;line-height:1.55}
+.cover h1 span{display:block}
+.cover h1 span:last-child{color:var(--brass-2)}
+.cover .meta{display:flex;justify-content:space-between;font-size:10pt;color:#a9bdb3;border-top:1px solid rgba(214,180,110,.35);padding-top:5mm}
+/* blocks */
+.vm{display:grid;grid-template-columns:1fr 1fr;gap:10mm;margin-top:12mm}
 .vm div{border-inline-start:2.5pt solid var(--brass);padding-inline-start:5mm}
-.vm h3{font-size:14pt;margin-bottom:1mm}
-.vals{display:grid;grid-template-columns:repeat(3,1fr);gap:6mm;margin-top:14mm}
-.vals div{background:var(--sage);border-radius:4mm;padding:6mm}
-.vals h3{font-size:13pt;color:var(--emerald);margin-bottom:1.5mm}
-.vals p{font-size:10pt;color:var(--muted);line-height:1.6}
-.svcs{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:8mm}
-.svcs div{border:1px solid var(--line);border-radius:4mm;padding:6mm}
-.svcs h3{font-size:14pt;margin-bottom:1.5mm}
-.svcs p{font-size:10pt;color:var(--muted);line-height:1.6}
-.journey{margin-top:14mm;background:var(--emerald);border-radius:5mm;padding:9mm;color:#dfe8e2}
-.journey h3{color:#fff;font-size:16pt;margin-bottom:6mm}
-.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:4mm}
-.steps div{font-size:9.5pt;line-height:1.55;color:#bcd0c5}
-.steps b{display:grid;place-items:center;width:10mm;height:10mm;border-radius:50%;background:var(--brass-2);color:var(--deep);font-family:"Noto Kufi Arabic";font-size:12pt;margin-bottom:3mm}
-.steps strong{display:block;color:#fff;font-weight:500;font-size:10.5pt}
-.aud{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:8mm}
-.aud div{padding:6mm;border-radius:4mm;background:var(--sage)}
-.aud h3{font-size:14pt;color:var(--emerald);margin-bottom:1.5mm}
-.aud p{font-size:10pt;color:var(--muted);line-height:1.6}
-.close{margin-top:14mm;background:var(--deep);color:#dfe8e2;border-radius:5mm;padding:12mm 10mm;position:relative;overflow:hidden}
-.close .pat{opacity:.1}
-.close>*{position:relative}
-.close h2{color:#fff;font-size:24pt;margin-bottom:3mm}
-.close p{color:#a9bdb3}
-.close dl{display:grid;grid-template-columns:auto 1fr;gap:3mm 8mm;margin-top:7mm;font-size:11pt}
-.close dt{color:#86998f}.close dd{color:#fff}
-.note{font-size:8.5pt;color:var(--muted);margin-top:4mm}
+.vm h3{font-size:14pt;margin-bottom:1.5mm}
+.serve{margin-top:14mm;background:var(--sage);border-radius:5mm;padding:9mm}
+.serve h3{font-size:15pt;margin-bottom:3mm}
+.chips{display:flex;flex-wrap:wrap;gap:3mm;margin-top:5mm}
+.chips span{background:#fff;border-radius:20mm;padding:2mm 5mm;font-size:10.5pt;color:var(--ink)}
+.side-img{position:absolute;bottom:30mm;left:20mm;width:56mm;height:80mm;background:url(img/arches.jpg) center/cover}
+.tracks{display:grid;gap:4.5mm;margin-top:7mm}
+.tr{display:grid;grid-template-columns:16mm 1fr;gap:6mm;border:1px solid var(--line);border-radius:4mm;padding:6mm}
+.tr b{font-family:"Noto Kufi Arabic";font-size:22pt;color:var(--brass);line-height:1}
+.tr h3{font-size:14pt}
+.tr small{display:block;color:var(--emerald);font-weight:500;font-size:10pt;margin-bottom:1.5mm}
+.tr p{font-size:10.5pt;color:var(--muted);line-height:1.75}
+.band{margin-top:7mm;background:var(--emerald);border-radius:5mm;padding:9mm;text-align:center;color:#dfe8e2}
+.band p:first-child{font-size:11pt;color:#bcd0c5}
+.band p:last-child{font-family:"Noto Kufi Arabic";font-weight:700;color:#fff;font-size:17pt;line-height:1.6}
+.six{display:grid;grid-template-columns:1fr 1fr;gap:6mm 9mm;margin-top:8mm}
+.six div{border-top:1.5pt solid var(--brass);padding-top:3mm}
+.six h3{font-size:12pt;margin-bottom:1mm}
+.six p{font-size:10pt;color:var(--muted);line-height:1.75}
+.closing{margin-top:9mm;border-inline-start:3pt solid var(--brass);padding-inline-start:6mm;font-size:12pt;color:var(--ink)}
+.list{list-style:none;margin:5mm 0;display:grid;gap:2.5mm}
+.list li{display:flex;gap:3mm;align-items:baseline;font-size:11pt}
+.list li::before{content:"";width:2mm;height:2mm;background:var(--brass);transform:rotate(45deg);flex:none;translate:0 -.6mm}
+.q{font-family:"Noto Kufi Arabic";font-weight:700;color:var(--emerald);font-size:14pt;line-height:1.65;margin:6mm 0}
+.dark .q{color:var(--brass-2)}
+.sub{display:flex;align-items:baseline;gap:4mm;margin:9mm 0 3mm}
+.sub b{font-family:"Noto Kufi Arabic";font-size:20pt;color:var(--brass);line-height:1}
+.sub h3{font-size:16pt}
+.sub small{color:var(--muted);font-size:10pt}
+.how{display:grid;grid-template-columns:1fr 1fr;gap:7mm;margin-top:8mm}
+.how div{background:var(--sage);border-radius:4mm;padding:6mm}
+.how h3{font-size:13pt;margin-bottom:1.5mm;color:var(--emerald)}
+.how p{font-size:10pt;color:var(--muted);line-height:1.75}
+.asks{list-style:none;font-family:"Noto Kufi Arabic";font-weight:600;color:var(--ink);font-size:11pt;line-height:1.8;margin:1mm 0 2mm}
+.mz{list-style:none;margin:8mm 0;display:grid;gap:3mm}
+.mz li{font-size:13pt;color:#e3ece6;border-bottom:1px solid rgba(214,180,110,.25);padding-bottom:3mm}
+.contact{margin-top:auto;border:1px solid rgba(214,180,110,.35);border-radius:5mm;padding:8mm;display:grid;grid-template-columns:auto 1fr;gap:3mm 8mm;font-size:11pt}
+.contact dt{color:#86998f}.contact dd{color:#fff}
 </style>
 </head>
 <body>
@@ -70,86 +85,138 @@ h2{font-size:28pt;margin-bottom:6mm}
   <pattern id="khatam" width="64" height="64" patternUnits="userSpaceOnUse"><g fill="none" stroke="#d6b46e" stroke-width="1"><rect x="14" y="14" width="36" height="36"/><rect x="14" y="14" width="36" height="36" transform="rotate(45 32 32)"/><circle cx="32" cy="32" r="6"/></g></pattern>
 </svg>
 
-<section class="page cover">
+<!-- 1 cover -->
+<section class="page dark cover">
   <svg class="pat"><rect width="100%" height="100%" fill="url(#khatam)"/></svg>
-  <div class="top"><img src="img/logo.jpg" alt=""><b>ركائز</b></div>
+  <img class="logo" src="img/logo-flat-light.png" alt="ركائز">
   <div class="photo arch"></div>
   <div class="txt">
-    <p style="color:var(--brass-2);font-size:11pt;margin-bottom:5mm">الملف التعريفي</p>
-    <h1>الأصل يبقى،<span>والأثر يجري.</span></h1>
-    <p style="max-width:95mm;margin-top:6mm;color:#a9bdb3">شركة سعودية متخصصة في الاستشارات الهندسية وإنشاءات وإدارة وتشغيل الأوقاف.</p>
+    <p style="color:var(--brass-2);font-size:12pt;margin-bottom:4mm">الملف التعريفي</p>
+    <h1><span>أصل يُصان، وإجراء يُنجز،</span><span>ووقف تنمو منفعته.</span></h1>
   </div>
-  <div class="meta"><span>ركائز لإنشاءات وإدارة الأوقاف</span><span>1448هـ / 2026م</span></div>
+  <div class="meta"><span>ركائز لإدارة وتطوير الأوقاف</span><span>مكة المكرمة</span><span>1448هـ / 2026م</span></div>
 </section>
 
+<!-- 2 about -->
 <section class="page">
   <p class="kicker">من نحن</p>
-  <h2>ركائز راسخة، لمستقبل أكثر استدامة.</h2>
-  <p class="lead">نؤمن بأن الوقف استثمار في الإنسان والمستقبل، وأنه صدقة جارية تستحق أن تُدار بأعلى درجات الأمانة والاحتراف. لذلك نرافق الواقف من الفكرة إلى الريع: ندرس الأصل، ونصمّمه ونبنيه، ثم نديره لينمو عائده ويصل إلى مصارفه.</p>
-  <div class="two">
-    <div class="vm">
-      <div><h3>رؤيتنا</h3><p>أن نكون الشريك الأول للواقفين في المملكة لبناء أوقاف تدوم وتُثمر.</p></div>
-      <div><h3>رسالتنا</h3><p>تأسيس الأوقاف وتطويرها وتشغيلها بخبرة هندسية وإدارية متكاملة، ووفق شروط الواقف وأنظمة الهيئة العامة للأوقاف.</p></div>
-      <div><h3>رؤية 2030</h3><p>نسهم في مستهدفات تمكين القطاع غير الربحي ورفع كفاءة الأصول الوقفية.</p></div>
-    </div>
-    <div class="img arch"></div>
+  <h2>نعتني بالوقف انطلاقاً من احتياجه.</h2>
+  <p class="lead">ندير أصوله، وننظم أعماله، ونتابع إجراءاته، ونربط بين تفاصيله التشغيلية ومتطلباته الوقفية؛ ليبقى الأصل محفوظاً، والعمل منضبطاً، والمنفعة مستمرة.</p>
+  <div class="vm">
+    <div><h3>الرؤية</h3><p>أوقاف راسخة، تنمو أصولها وتمتد منافعها.</p></div>
+    <div><h3>الرسالة</h3><p>تحويل احتياجات الوقف إلى أعمال منظمة ومتابعة مستمرة؛ بإدارة أصوله، وضبط عملياته، وإنجاز إجراءاته، وتطوير أدائه بما يحقق مقصده ويعزز استدامته.</p></div>
   </div>
-  <div class="vals">
-    <div><h3>شروط الواقف أولاً</h3><p>كل قرار يُبنى على وثيقة الوقف ومصارفه.</p></div>
-    <div><h3>شفافية كاملة</h3><p>تقارير دورية بالإيرادات والمصروفات والتوزيعات.</p></div>
-    <div><h3>حفظ الأصل</h3><p>صيانة وقائية واحتياطي يحمي الأصل من التآكل.</p></div>
-    <div><h3>سرية تامة</h3><p>بيانات الواقف وأصوله لا تُشارك مع أي طرف.</p></div>
-    <div><h3>امتثال للأنظمة</h3><p>نعمل وفق أنظمة الهيئة العامة للأوقاف ولوائحها.</p></div>
-    <div><h3>شراكة طويلة</h3><p>نقيس نجاحنا بعمر الوقف، لا بموعد التسليم.</p></div>
+  <div class="serve" style="margin-inline-end:66mm">
+    <h3>من نخدم</h3>
+    <p class="muted">نخدم الواقفين والنظار، ونعمل مع الأوقاف العائلية والخاصة، والجهات المالكة أو المشرفة على الأصول الوقفية، وفق احتياجات كل وقف وطبيعة أعماله.</p>
+    <div class="chips"><span>الواقفون</span><span>النظّار</span><span>الأوقاف العائلية والخاصة</span><span>الجهات المالكة أو المشرفة</span></div>
   </div>
-  <div class="foot"><span>ركائز | الملف التعريفي</span><span>02</span></div>
+  <div class="side-img arch"></div>
+  <div class="foot"><img src="img/logo-flat.png" alt=""><span>02</span></div>
 </section>
 
+<!-- 3 services overview -->
 <section class="page">
   <p class="kicker">خدماتنا</p>
-  <h2>من الفكرة إلى الريع، تحت سقف واحد.</h2>
-  <p class="lead">لا يحتاج الواقف إلى التنسيق بين مكتب هندسي ومقاول وشركة إدارة. نتولى المراحل كلها، ونبقى مسؤولين عن النتيجة.</p>
-  <div class="svcs">
-    <div><h3>الاستشارات الهندسية</h3><p>دراسة الجدوى واختيار الأصل، والتصميم المعماري والإنشائي، والرخص والاعتمادات.</p></div>
-    <div><h3>الإنشاءات الوقفية</h3><p>إدارة التنفيذ والإشراف، وضبط التكلفة والجدول الزمني، ومواد تقلل كلفة الصيانة.</p></div>
-    <div><h3>إدارة وتشغيل الأوقاف</h3><p>التأجير والتحصيل، والصيانة الوقائية، وتقارير ريع ربع سنوية للناظر.</p></div>
-    <div><h3>تطوير الأوقاف المتعثرة</h3><p>تشخيص أسباب التعثر، وإعادة التطوير أو الإحلال، ونموذج تشغيل جديد يرفع العائد.</p></div>
+  <h2>عناية تعرف أصله، وتفهم مقصده، وتتابع تفاصيله.</h2>
+  <p class="lead">الوقف لا يحتاج إلى خدمة عابرة. لذلك لا نبدأ من قائمة خدمات جاهزة، بل من واقع كل وقف واحتياجه، ثم نعمل عبر ثلاثة مسارات مترابطة، تبدأ من الأصل، وتمتد إلى الإجراء، وتصل إلى تطوير الوقف وتنميته واستدامة منفعته.</p>
+  <div class="tracks">
+    <div class="tr"><b>١</b><div><small>إدارة الأوقاف والأصول الوقفية</small><h3>ندير الأصل</h3><p>نعتني بالأصل الوقفي في تفاصيله اليومية؛ من تسويقه وتأجيره وعقوده وتحصيله، إلى صيانته وتشغيله ومتابعته، بعناية تحفظ الأصل، وتنظم إدارته، وتعزز استقرار عوائده.</p></div></div>
+    <div class="tr"><b>٢</b><div><small>الخدمات الوقفية والإجرائية</small><h3>ننجز الإجراء</h3><p>نرافق الإجراء الوقفي من بدايته إلى اكتمال مساره؛ نرتب متطلباته، ونضبط وثائقه، ونتابع خطواته عبر الجهات والمنصات ذات العلاقة، ونتعامل مع ما يطرأ عليه؛ ليبقى اهتمام صاحب الوقف بمقصده، ونخفف عنه عناء الإجراء.</p></div></div>
+    <div class="tr"><b>٣</b><div><small>تطوير وتنمية الأوقاف</small><h3>نطوّر وننمّي الوقف</h3><p>نقرأ واقع الوقف أولاً، ونحدد ما يحتاج إلى تحسين في تنظيمه وأعماله وممارساته، وما يملكه من فرص لتنمية أصوله وعوائده، ثم نبني خطوات واقعية تعزز كفاءته، وتنمي قدرته على الاستمرار، وتقربه من مقصده.</p></div></div>
   </div>
-  <div class="journey">
-    <h3>رحلة الوقف معنا</h3>
-    <div class="steps">
-      <div><b>١</b><strong>الفكرة والتوثيق</strong>صياغة الوثيقة، والتوثيق لدى وزارة العدل، والتسجيل لدى الهيئة العامة للأوقاف.</div>
-      <div><b>٢</b><strong>دراسة الجدوى</strong>تقييم الموقع والسوق، وسيناريوهات العائد.</div>
-      <div><b>٣</b><strong>التصميم والإنشاء</strong>تصميم بهوية أصيلة وتنفيذ تحت إشرافنا.</div>
-      <div><b>٤</b><strong>التشغيل</strong>تأجير وتحصيل وصيانة واحتياطي للأصل.</div>
-      <div><b>٥</b><strong>الريع والتقارير</strong>توزيع وفق الشروط وتقرير ربع سنوي.</div>
-    </div>
-  </div>
-  <div class="foot"><span>ركائز | الملف التعريفي</span><span>03</span></div>
+  <div class="band"><p>ثلاثة مسارات، وغاية واحدة:</p><p>أصل يُصان، وإجراء يُنجز، ووقف تنمو منفعته.</p></div>
+  <div class="foot"><img src="img/logo-flat.png" alt=""><span>03</span></div>
 </section>
 
+<!-- 4 asset management -->
 <section class="page">
-  <p class="kicker">لمن نعمل</p>
-  <h2>لكل واقفٍ مسارٌ يناسبه.</h2>
-  <div class="aud">
-    <div><h3>الأفراد</h3><p>وقف خاص باسمك يبقى صدقة جارية، دون أن تحمل عبء الإدارة.</p></div>
-    <div><h3>الأسر</h3><p>وقف ذري يجمع الأجيال، بحوكمة واضحة تمنع الخلاف.</p></div>
-    <div><h3>الشركات</h3><p>وقف مؤسسي بأثر قابل للقياس، وتقارير جاهزة للإفصاح.</p></div>
-    <div><h3>الجمعيات والنظّار</h3><p>تطوير الأوقاف القائمة والمتعثرة، وتشغيل يرفع العائد.</p></div>
+  <p class="kicker">المسار الأول</p>
+  <h2>إدارة الأوقاف والأصول الوقفية</h2>
+  <p class="lead">الأصل الموقوف لم يُحبس لمجرد بقائه، بل ليبقى نفعه ممتداً. ومن هنا تبدأ إدارتنا.</p>
+  <p class="lead">نقترب من تفاصيل الأصل قبل أن تتحول إلى مشكلات؛ نعرف عقوده، ومستأجريه، ومستحقاته، واحتياجاته التشغيلية، ونربطها في متابعة واحدة تجعل لكل عقد موعداً، ولكل مستحق متابعة، ولكل صيانة إجراء، ولصاحب الوقف صورة واضحة عن أصلٍ أوقف ليبقى.</p>
+  <h3 style="font-size:14pt;margin-top:8mm;color:var(--emerald)">إدارة تبدأ من التفاصيل وتصل إلى المنفعة</h3>
+  <div class="six">
+    <div><h3>١. نسوّق ليُنتفع بالأصل</h3><p>ندرس واقع الأصل وفرص إشغاله، ونتابع تسويقه وتأجيره بما يناسب طبيعته واحتياج السوق؛ لأن شغور الأصل القابل للتأجير قد يعطل الانتفاع بريعه.</p></div>
+    <div><h3>٢. نضبط العقد قبل أن يصبح موعداً منسياً</h3><p>ننظم بيانات العقود والمستأجرين، ونرصد مواعيدها ونهاياتها وتجديداتها وما يطرأ عليها؛ لتبقى العلاقة الإيجارية واضحة ومتابعة في وقتها.</p></div>
+    <div><h3>٣. نتابع المستحقات قبل أن تتأخر</h3><p>نربط المستحقات بعقودها ومواعيدها، ونتابع التحصيل والمتأخرات بصورة منتظمة؛ حتى تكون حركة الريع أوضح، والمتابعة أسبق من التعثر.</p></div>
+    <div><h3>٤. نصون الأصل ليستمر</h3><p>نرصد احتياجات الصيانة والتشغيل، وننظم أعمالها ونتابع تنفيذها؛ فالعناية بالأصل ليست تكلفة عابرة، بل جزء من بقائه واستمرار منفعته.</p></div>
+    <div><h3>٥. نجمع التفاصيل لتصبح قراراً</h3><p>العقد، والمستأجر، والتحصيل، والصيانة، والإشغال ليست ملفات متفرقة؛ نجمع بياناتها في متابعة منظمة، ونحولها إلى صورة دورية واضحة تعين صاحب الوقف أو الناظر على اتخاذ القرار.</p></div>
+    <div><h3>٦. نكون حيث يحتاجنا الوقف</h3><p>نتابع ميدانياً ما يستلزم الحضور، وننسق بين الأطراف ذات العلاقة، ونشرف على ما يتطلب المتابعة من الأصول والصيانة والأعمال والمواقع والاجتماعات؛ ليبقى صاحب الوقف أو الناظر قريباً من التفاصيل، دون أن ينشغل بكل تفاصيلها.</p></div>
   </div>
-  <div class="close">
-    <svg class="pat"><rect width="100%" height="100%" fill="url(#khatam)"/></svg>
-    <h2>لنضع الركيزة الأولى.</h2>
-    <p>كل صدقة جارية تبدأ بخطوة. احجز استشارتك المجانية.</p>
-    <dl>
-      <dt>الموقع الإلكتروني</dt><dd dir="ltr" style="text-align:right">andrewhaliem443.github.io/rakaz-site</dd>
-      <dt>الجوال وواتساب</dt><dd>يُضاف عند الاعتماد</dd>
-      <dt>البريد الإلكتروني</dt><dd>يُضاف عند الاعتماد</dd>
-      <dt>المقر</dt><dd>المملكة العربية السعودية</dd>
-    </dl>
+  <p class="closing">وفي ركائز، لا تنتهي إدارة الأصل عند تأجيره أو تحصيل ريعه. الإدارة عندنا دورة تبدأ بمعرفة الأصل، وتعيش مع تفاصيله، وتسبق احتياجاته؛ حتى يبقى الأصل مصاناً، وريعه متابعاً، ومنفعته ممتدة.</p>
+  <div class="foot"><img src="img/logo-flat.png" alt=""><span>04</span></div>
+</section>
+
+<!-- 5 beyond the asset: procedures -->
+<section class="page">
+  <p class="kicker">ما وراء الأصل</p>
+  <h2>للوقف أصل نراه، وتفاصيل تصنع استمراره وإن لم تُرَ.</h2>
+  <p class="lead">وثيقة تضبطه، وإجراء يستكمل متطلباته، وتنظيم يحكم أعماله، وتطوير يهيئه لما هو قادم. وهنا يمتد دور ركائز إلى ما وراء إدارة الأصل.</p>
+  <div class="sub"><b>١</b><div><h3>نختصر رحلة الإجراء</h3><small>الخدمات الوقفية والإجرائية</small></div></div>
+  <p class="lead">بين بداية الطلب واكتمال مساره تفاصيل كثيرة؛ وثيقة، ومتطلب، ومنصة، وجهة، وملاحظة قد تفتح خطوة أخرى. لذلك نرتب الرحلة قبل أن نبدأها؛ نفهم الإجراء، ونراجع متطلباته، وننظم ملفه ووثائقه، ونتابع خطواته وما يستجد عليه، حتى لا يبقى صاحب الوقف منشغلاً بسؤال:</p>
+  <p class="q">أين وصلت معاملتي؟</p>
+  <p style="font-weight:500;color:var(--ink)">ومن أعمال هذا المسار:</p>
+  <ul class="list">
+    <li>تسجيل الوقف والشهادات الوقفية وما يرتبط بها من تحديثات.</li>
+    <li>متابعة الصكوك والوثائق المرتبطة بالأصول الوقفية.</li>
+    <li>التسجيل العقاري ومتطلباته.</li>
+    <li>متابعة الإجراءات والخدمات الحكومية، وتمثيل الوقف أمام الجهات ذات العلاقة وفق الصلاحيات والتفويضات النظامية.</li>
+    <li>متابعة الطلبات والاستكمالات عبر الجهات والمنصات ذات العلاقة.</li>
+  </ul>
+  <p class="closing">نحن لا نملك زمن الجهة؛ لكننا نملك أن نجعل رحلة الإجراء أوضح وأخف على صاحب الوقف.</p>
+  <div class="foot"><img src="img/logo-flat.png" alt=""><span>05</span></div>
+</section>
+
+<!-- 6 development -->
+<section class="page">
+  <p class="kicker">ما وراء الأصل</p>
+  <div class="sub" style="margin-top:0"><b>٢</b><div><h3>نهيئ الوقف لما هو قادم</h3><small>تطوير وتنمية الأوقاف</small></div></div>
+  <p class="lead">قد يكون الوقف قائماً، وأصله محفوظاً، وريعه حاضراً؛ ومع ذلك يبقى فيه ما يمكن أن يعمل بصورة أفضل. لذلك لا نبدأ التطوير والتنمية بحل جاهز، بل بسؤال:</p>
+  <p class="q">ما الذي يحتاجه هذا الوقف في مرحلته القادمة؟</p>
+  <p class="lead">نقرأ واقعه، ونحدد مواضع التحسين وفرص التنمية، ثم نبني معه مساراً يناسب حجمه واحتياجه؛ في إعادة ترتيب العمل عند الحاجة، وضبط الإجراءات، وتطوير الإدارة والحوكمة، والنظر في الفرص التي تسهم في تنمية أصوله وعوائده، ومعالجة الاحتياجات التي تتطلب معرفة متخصصة.</p>
+  <p class="lead">وإذا احتاج الوقف إلى تخصص يتجاوز نطاق عملنا، نصل العمل بأهل الاختصاص الشرعي والقانوني والمالي، ونتابع تكامل المسار؛ حتى تبقى احتياجات الوقف مترابطة ولا تتفرق بين التخصصات.</p>
+  <p class="lead">فالتطوير والتنمية عندنا ليسا أن نضيف إلى الوقف أعمالاً أكثر؛ بل أن نجعل ما لديه يعمل بصورة أفضل، ونبحث عما يمكن تنميته فيه، ليستمر بكفاءة أعلى، وينفع بصورة أوسع.</p>
+  <div class="band"><p>حين تستقيم التفاصيل، يصبح للوقف مساحة أوسع لينمو.</p><p>هذه رحلة نبني ركائزها اليوم، لتبقى منفعتها غداً.</p></div>
+  <div class="foot"><img src="img/logo-flat.png" alt=""><span>06</span></div>
+</section>
+
+<!-- 7 how we work -->
+<section class="page">
+  <p class="kicker">لأن الوقف أبقى</p>
+  <h2>كيف نعمل؟</h2>
+  <p class="lead">هناك أعمال تنتهي بانتهاء المهمة. أما الوقف، فكل قرار فيه يمتد أثره لسنوات، وربما لأجيال. لهذا لا نريد أن نكون مجرد جهة تنجز للوقف عملاً؛ بل جهة تعرف ماذا يعني أن تعمل لأصلٍ أُريد له البقاء.</p>
+  <div class="how">
+    <div><h3>نبدأ قبل البداية</h3><p>نفهم الوقف قبل أن نقترح عليه؛ نقرأ واقعه، وأصوله، ووثائقه، واحتياجه، ومقصده، حتى يبدأ العمل من السؤال الصحيح، لا من خدمة جاهزة.</p></div>
+    <div><h3>نرى ما بين التفاصيل</h3><p>العقد ليس ملفاً منفصلاً عن التحصيل، والصيانة ليست منفصلة عن الأصل، والوثيقة ليست منفصلة عن الإجراء، والتطوير والتنمية لا يبدآن بعيداً عن الواقع. نربط التفاصيل؛ لأن ما يبدو صغيراً اليوم قد يصنع فرقاً كبيراً في عمر الوقف غداً.</p></div>
+    <div><h3>نسبق السؤال</h3><ul class="asks"><li>متى ينتهي العقد؟</li><li>ماذا تأخر؟</li><li>ماذا يحتاج الأصل؟</li><li>أين وصل الإجراء؟</li><li>وما الخطوة التالية؟</li></ul><p>الإدارة التي نطمح إليها لا تنتظر السؤال حتى تبحث عن الإجابة؛ بل تجعل الإجابة حاضرة حين يحتاجها صاحب القرار.</p></div>
+    <div><h3>نتكامل مع أهل الاختصاص</h3><p>نعمل بتكامل يحفظ لكل تخصص دوره، ويجمع الخبرات التي يحتاجها الوقف في مسار واحد؛ لأن الوقف لا ينبغي أن يدفع ثمن تفرق التخصصات.</p></div>
   </div>
-  <p class="note">نسخة أولية للمعاينة. الصور تصورات معمارية توضيحية، وليست توثيقاً لمشاريع منفذة.</p>
-  <div class="foot"><span>ركائز | الملف التعريفي</span><span>04</span></div>
+  <div class="foot"><img src="img/logo-flat.png" alt=""><span>07</span></div>
+</section>
+
+<!-- 8 closing + contact -->
+<section class="page dark" style="display:flex;flex-direction:column;padding-bottom:32mm">
+  <svg class="pat"><rect width="100%" height="100%" fill="url(#khatam)"/></svg>
+  <p class="kicker" style="color:var(--brass-2)">ميزاننا</p>
+  <h2>ومهما تعددت الأعمال، يبقى لدينا ميزان واحد:</h2>
+  <p class="q" style="font-size:19pt">أن يكون ما نفعله نافعاً للوقف، لا كثيراً عليه.</p>
+  <ul class="mz">
+    <li>وأن يلقى الأصل عناية تليق به،</li>
+    <li>ويصبح الإجراء أوضح مساراً،</li>
+    <li>والمعلومة أقرب إلى القرار،</li>
+    <li>والوقف أقدر على مواصلة مقصده.</li>
+  </ul>
+  <p style="font-size:13pt;color:#fff">فالوقف لا يحتاج من يدير يومه فقط؛ بل من يفكر معه في غده.</p>
+  <dl class="contact">
+    <dt>الجوال وواتساب</dt><dd dir="ltr" style="text-align:right">0590974747</dd>
+    <dt>البريد الإلكتروني</dt><dd>info@rakaz.sa</dd>
+    <dt>الموقع الإلكتروني</dt><dd>www.rakaz.sa</dd>
+    <dt>المقر</dt><dd>مكة المكرمة، حي العوالي</dd>
+    <dt>السجل التجاري</dt><dd>7055004944</dd>
+  </dl>
+  <p style="margin-top:8mm;font-family:'Noto Kufi Arabic';font-weight:700;color:var(--brass-2);font-size:13pt">ركائز لإدارة وتطوير الأوقاف... نبني اليوم ما تحتاجه المنفعة لتبقى</p>
+  <div class="foot"><img src="img/logo-flat-light.png" alt=""><span>08</span></div>
 </section>
 </body>
 </html>

@@ -1,0 +1,22 @@
+# ركائز لإدارة وتطوير الأوقاف (Rakaz Waqf Management and Development)
+
+> ركائز شركة سعودية مقرها حي العوالي في مكة المكرمة، متخصصة في إدارة الأوقاف والأصول الوقفية، والخدمات الوقفية والإجرائية، وتطوير الأوقاف وتنميتها. تخدم الواقفين والنظّار والأوقاف العائلية والخاصة والجهات المالكة أو المشرفة على الأصول الوقفية في المملكة العربية السعودية. شعارها: «أصل يُصان، وإجراء يُنجز، ووقف تنمو منفعته».
+
+Rakaz is a Saudi company based in Al Awali, Makkah, specialised in waqf (Islamic endowment) asset management, waqf registration and procedures, and waqf development. It serves endowers (waqifs), waqf managers (nazirs), family and private awqaf, and entities that own or supervise endowment assets across Saudi Arabia.
+
+## بيانات التواصل
+- الجوال وواتساب: 0590974747 (+966590974747)
+- البريد الإلكتروني: info@rakaz.sa
+- المقر: مكة المكرمة، حي العوالي، المملكة العربية السعودية
+- السجل التجاري: 7055004944
+
+## الخدمات
+- [إدارة الأوقاف والأصول الوقفية](https://andrewhaliem443.github.io/rakaz-site/#services): تسويق الأصل الوقفي وتأجيره، وضبط العقود والمستأجرين، وتحصيل المستحقات والمتأخرات، والصيانة والتشغيل، والمتابعة الميدانية، وتقارير دورية للناظر.
+- [الخدمات الوقفية والإجرائية](https://andrewhaliem443.github.io/rakaz-site/#services): تسجيل الوقف والشهادات الوقفية وتحديثاتها، ومتابعة الصكوك والوثائق، والتسجيل العقاري، ومتابعة الإجراءات الحكومية وتمثيل الوقف وفق التفويضات النظامية.
+- [تطوير وتنمية الأوقاف](https://andrewhaliem443.github.io/rakaz-site/#services): قراءة واقع الوقف وتحديد مواضع التحسين، وتطوير الإدارة والحوكمة والإجراءات، وتنمية الأصول والعوائد، والتكامل مع أهل الاختصاص الشرعي والقانوني والمالي.
+
+## روابط
+- [الموقع الرسمي](https://andrewhaliem443.github.io/rakaz-site/)
+- [الملف التعريفي PDF](https://andrewhaliem443.github.io/rakaz-site/rakaz-profile.pdf)
+- [الأسئلة الشائعة](https://andrewhaliem443.github.io/rakaz-site/#faq)
+- [النص الكامل للملف التعريفي](https://andrewhaliem443.github.io/rakaz-site/llms-full.txt)
