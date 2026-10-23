@@ -4,7 +4,8 @@
   const secs=[...document.querySelectorAll('[data-nav]')];
   if(secs.length<2)return;
   const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const go=el=>el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});
+  let paint=()=>{};
+  const go=el=>{el.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});setTimeout(paint,60);setTimeout(paint,700)};
 
   const rail=document.createElement('nav');
   rail.className='rail';rail.setAttribute('aria-label','أقسام الصفحة');
@@ -26,7 +27,7 @@
     secs.forEach((s,i)=>{if(s.getBoundingClientRect().top<=y)c=i});
     return c;
   }
-  function paint(){
+  paint=function(){
     cur=current();
     dots.forEach((d,i)=>d.toggleAttribute('aria-current',i===cur));
     const last=cur===secs.length-1;
@@ -38,7 +39,7 @@
   dots.forEach(d=>d.onclick=()=>go(secs[+d.dataset.i]));
   next.onclick=()=>go(secs[cur===secs.length-1?0:cur+1]);
   prev.onclick=()=>cur>0&&go(secs[cur-1]);
-  addEventListener('scroll',paint,{passive:true});addEventListener('resize',paint);paint();
+  addEventListener('scroll',()=>paint(),{passive:true});addEventListener('scrollend',()=>paint());addEventListener('resize',()=>paint());paint();
   // keyboard: J/K or Alt+arrows move between sections (plain arrows stay for sliders/tabs)
   addEventListener('keydown',e=>{
     if(e.target.closest('input,textarea,select,[role=tab]'))return;

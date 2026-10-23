@@ -308,3 +308,4 @@ ol.six li b::before{content:counter(s,arabic-indic) ". ";color:var(--brass)}
   .st-count{display:none}
   footer{padding-bottom:90px}
 }
+[data-nav]{scroll-margin-top:78px}
